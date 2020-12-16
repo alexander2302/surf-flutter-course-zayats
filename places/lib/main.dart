@@ -1,35 +1,52 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(App());
 }
 
-class MyApp extends StatelessWidget {
+class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(fontFamily: 'RobotoBlack'),
-      //home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      //home: MyFirstWidget(),
+      // home: const MyHomePage(title: 'Flutter1'),
+      // home: MyFirstWidget(title: 'Flutter Demo Home Page'),
       home: MySecondWidget(),
     );
   }
 }
 
 class MyFirstWidget extends StatelessWidget {
+  final String title;
+
+  MyFirstWidget({Key key, this.title}) : super(key: key);
+
   int _counter = 0;
+  BuildContext _context1;
 
   @override
   Widget build(BuildContext context) {
     _counter++;
+    _context1 = context;
     print('_counter = $_counter');
 
     return Container(
       child: Center(
-        child: Text('Hello'),
+        //child: Text('Hello'),
+        child: MaterialButton(
+          child: Text("Test getRuntimeType()"),
+          onPressed: () {
+            getRuntimeType();
+          },
+        ),
       ),
     );
+  }
+
+  Type getRuntimeType() {
+    print('getRuntimeType');
+    return _context1.runtimeType;
   }
 }
 
@@ -40,17 +57,27 @@ class MySecondWidget extends StatefulWidget {
 
 class _MySecondWidgetState extends State<MySecondWidget> {
   int _counter = 0;
+  BuildContext _context2;
 
   @override
   Widget build(BuildContext context) {
     _counter++;
+    _context2 = context;
     print('_counter = $_counter');
 
     return Container(
-      child: Center(
-        child: Text('Hello'),
+      child: MaterialButton(
+        child: Text("Test getRuntimeType2()"),
+        onPressed: () {
+          getRuntimeType2();
+        },
       ),
     );
+  }
+
+  Type getRuntimeType2() {
+    print('getRuntimeType2');
+    return _context2.runtimeType;
   }
 }
 

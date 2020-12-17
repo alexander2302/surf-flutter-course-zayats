@@ -16,6 +16,9 @@ class SightListScreen extends StatefulWidget {
  * (маржины, падинги и многие другие способы не сработали, тогда 
  * вспомнил что в уроке 4.1 расказывали о PreferredSize, с его помощью получилось)
  * не уверен это правильный подход или нет
+ * 
+ * еще отличается от предыдущего урока параметром height: 1.12 (без него больше
+ * похоже на дизайн)
 */
 class _SightListScreenState extends State<SightListScreen> {
   @override
@@ -31,16 +34,38 @@ class _SightListScreenState extends State<SightListScreen> {
           child: Container(
             width: double.infinity,
             margin: EdgeInsets.only(left: 16.0, right: 16.0),
-            child: Text(
-              'Список \nинтересных мест',
-              style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 32,
-                  fontWeight: FontWeight.w700,
-                  fontFamily: 'RobotoBlack',
-                  height: 1.12),
-              maxLines: 2,
+            child: RichText(
+              text: TextSpan(
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 32,
+                    fontWeight: FontWeight.w700,
+                    fontFamily: 'RobotoBlack',
+                  ),
+                  children: [
+                    TextSpan(children: [
+                      TextSpan(
+                          text: 'С',
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 103, 171, 91),
+                          )),
+                      TextSpan(
+                        text: 'писок',
+                      )
+                    ]),
+                    TextSpan(children: [
+                      TextSpan(
+                          text: '\nи',
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 248, 220, 94),
+                          )),
+                      TextSpan(
+                        text: 'нтересных мест',
+                      )
+                    ]),
+                  ]),
               overflow: TextOverflow.ellipsis,
+              maxLines: 2,
             ),
           ),
         ),

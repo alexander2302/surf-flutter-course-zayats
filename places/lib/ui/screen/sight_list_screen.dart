@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 
+/*
+  * class for the application screen "List of Interests"
+  * (will display a list with places around the user)
+*/
+
 class SightListScreen extends StatefulWidget {
   @override
   _SightListScreenState createState() => _SightListScreenState();

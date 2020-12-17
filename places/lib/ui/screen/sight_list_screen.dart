@@ -16,9 +16,6 @@ class SightListScreen extends StatefulWidget {
  * (маржины, падинги и многие другие способы не сработали, тогда 
  * вспомнил что в уроке 4.1 расказывали о PreferredSize, с его помощью получилось)
  * не уверен это правильный подход или нет
- * 
- * еще отличается от предыдущего урока параметром height: 1.12 (без него больше
- * похоже на дизайн)
 */
 class _SightListScreenState extends State<SightListScreen> {
   @override

@@ -5,6 +5,15 @@ import 'package:flutter/material.dart';
   * (will display a list with places around the user)
 */
 
+const String title = 'Список \nинтересных мест';
+const TextStyle textStyleForTitle = TextStyle(
+  color: Colors.black,
+  fontSize: 32,
+  fontWeight: FontWeight.w700,
+  fontFamily: 'RobotoBlack',
+  height: 1.12,
+);
+
 class SightListScreen extends StatefulWidget {
   @override
   _SightListScreenState createState() => _SightListScreenState();
@@ -30,15 +39,13 @@ class _SightListScreenState extends State<SightListScreen> {
           preferredSize: Size.fromHeight(64),
           child: Container(
             width: double.infinity,
-            margin: EdgeInsets.only(left: 16.0, right: 16.0),
+            margin: EdgeInsets.only(
+              left: 16.0,
+              right: 16.0,
+            ),
             child: Text(
-              'Список \nинтересных мест',
-              style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 32,
-                  fontWeight: FontWeight.w700,
-                  fontFamily: 'RobotoBlack',
-                  height: 1.12),
+              title,
+              style: textStyleForTitle,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
             ),

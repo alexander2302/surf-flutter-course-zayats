@@ -5,13 +5,17 @@ import 'package:flutter/material.dart';
   * (will display a list with places around the user)
 */
 
-const String title = 'Список \nинтересных мест';
+
+const String titleLine1w1 = 'С';
+const String titleLine1w2 = 'писок';
+const String titleLine2w1 = '\nи';
+const String titleLine2w2 = 'нтересных мест';
+
 const TextStyle textStyleForTitle = TextStyle(
   color: Colors.black,
   fontSize: 32,
   fontWeight: FontWeight.w700,
   fontFamily: 'RobotoBlack',
-  height: 1.12,
 );
 
 class SightListScreen extends StatefulWidget {
@@ -39,15 +43,41 @@ class _SightListScreenState extends State<SightListScreen> {
           preferredSize: Size.fromHeight(64),
           child: Container(
             width: double.infinity,
-            margin: EdgeInsets.only(
-              left: 16.0,
-              right: 16.0,
-            ),
-            child: Text(
-              title,
-              style: textStyleForTitle,
-              maxLines: 2,
+            margin: EdgeInsets.only(left: 16.0, right: 16.0),
+            child: RichText(
+              text: TextSpan(
+                style: textStyleForTitle,
+                children: [
+                  TextSpan(
+                    children: [
+                      TextSpan(
+                        text: titleLine1w1,
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 103, 171, 91),
+                        ),
+                      ),
+                      TextSpan(
+                        text: titleLine1w2,
+                      )
+                    ],
+                  ),
+                  TextSpan(
+                    children: [
+                      TextSpan(
+                        text: titleLine2w1,
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 248, 220, 94),
+                        ),
+                      ),
+                      TextSpan(
+                        text: titleLine2w2,
+                      )
+                    ],
+                  ),
+                ],
+              ),
               overflow: TextOverflow.ellipsis,
+              maxLines: 2,
             ),
           ),
         ),

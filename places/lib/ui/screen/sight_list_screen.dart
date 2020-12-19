@@ -5,6 +5,18 @@ import 'package:flutter/material.dart';
   * (will display a list with places around the user)
 */
 
+const String titleLine1w1 = 'С';
+const String titleLine1w2 = 'писок';
+const String titleLine2w1 = '\nи';
+const String titleLine2w2 = 'нтересных мест';
+
+const TextStyle textStyleForTitle = TextStyle(
+  color: Colors.black,
+  fontSize: 32,
+  fontWeight: FontWeight.w700,
+  fontFamily: 'RobotoBlack',
+);
+
 class SightListScreen extends StatefulWidget {
   @override
   _SightListScreenState createState() => _SightListScreenState();
@@ -33,34 +45,36 @@ class _SightListScreenState extends State<SightListScreen> {
             margin: EdgeInsets.only(left: 16.0, right: 16.0),
             child: RichText(
               text: TextSpan(
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 32,
-                    fontWeight: FontWeight.w700,
-                    fontFamily: 'RobotoBlack',
+                style: textStyleForTitle,
+                children: [
+                  TextSpan(
+                    children: [
+                      TextSpan(
+                        text: titleLine1w1,
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 103, 171, 91),
+                        ),
+                      ),
+                      TextSpan(
+                        text: titleLine1w2,
+                      )
+                    ],
                   ),
-                  children: [
-                    TextSpan(children: [
+                  TextSpan(
+                    children: [
                       TextSpan(
-                          text: 'С',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 103, 171, 91),
-                          )),
+                        text: titleLine2w1,
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 248, 220, 94),
+                        ),
+                      ),
                       TextSpan(
-                        text: 'писок',
+                        text: titleLine2w2,
                       )
-                    ]),
-                    TextSpan(children: [
-                      TextSpan(
-                          text: '\nи',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 248, 220, 94),
-                          )),
-                      TextSpan(
-                        text: 'нтересных мест',
-                      )
-                    ]),
-                  ]),
+                    ],
+                  ),
+                ],
+              ),
               overflow: TextOverflow.ellipsis,
               maxLines: 2,
             ),

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
   * (will display a list with places around the user)
 */
 
+
 const String titleLine1w1 = 'С';
 const String titleLine1w2 = 'писок';
 const String titleLine2w1 = '\nи';

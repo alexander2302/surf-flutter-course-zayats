@@ -25,4 +25,32 @@ class Sight {
     this.details = details;
     this.type = type;
   }
+
+  String getTypeName() {
+    switch (type) {
+      case SightType.iconicBuildings:
+        return "Культовые здания";
+
+      case SightType.architecturalMonuments:
+        return "Памятники архитектуры";
+
+      case SightType.streetsAndDistricts:
+        return "Улицы и районы";
+
+      case SightType.modernStructures:
+        return "Современные сооружения";
+
+      case SightType.theatersAndMuseums:
+        return "Театры и музеи";
+
+      case SightType.parksAndNature:
+        return "Парки и природа";
+
+      case SightType.museum:
+        return "Музеи";
+
+      default:
+        return "no type name";
+    }
+  }
 }

@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:places/mocks.dart';
+import 'package:places/ui/screen/sight_card.dart';
 
 /*
   * class for the application screen "List of Interests"
   * (will display a list with places around the user)
 */
 
-
-const String titleLine1w1 = 'С';
-const String titleLine1w2 = 'писок';
-const String titleLine2w1 = '\nи';
-const String titleLine2w2 = 'нтересных мест';
+const String titleLine1w2 = 'Cписок';
+const String titleLine2w2 = '\nинтересных мест';
 
 const TextStyle textStyleForTitle = TextStyle(
   color: Colors.black,
@@ -33,6 +32,24 @@ class SightListScreen extends StatefulWidget {
 class _SightListScreenState extends State<SightListScreen> {
   @override
   Widget build(BuildContext context) {
+    print(mocks.length);
+
+    SightCard sCardEx0 = new SightCard(
+      sight: mocks[0],
+    );
+
+    SightCard sCardEx1 = new SightCard(
+      sight: mocks[1],
+    );
+
+    SightCard sCardEx2 = new SightCard(
+      sight: mocks[2],
+    );
+
+    SightCard sCardEx3 = new SightCard(
+      sight: mocks[3],
+    );
+
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -51,24 +68,12 @@ class _SightListScreenState extends State<SightListScreen> {
                   TextSpan(
                     children: [
                       TextSpan(
-                        text: titleLine1w1,
-                        style: TextStyle(
-                          color: Color.fromARGB(255, 103, 171, 91),
-                        ),
-                      ),
-                      TextSpan(
                         text: titleLine1w2,
                       )
                     ],
                   ),
                   TextSpan(
                     children: [
-                      TextSpan(
-                        text: titleLine2w1,
-                        style: TextStyle(
-                          color: Color.fromARGB(255, 248, 220, 94),
-                        ),
-                      ),
                       TextSpan(
                         text: titleLine2w2,
                       )
@@ -82,6 +87,17 @@ class _SightListScreenState extends State<SightListScreen> {
           ),
         ),
       ),
+      body: Center(
+          child: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            sCardEx0,
+            sCardEx1,
+            sCardEx2,
+            sCardEx3,
+          ],
+        ),
+      )),
     );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:places/domain/sight.dart';
 
-final List mocks = [];
+List<Sight> mocks = [];
 
 /*
   * генерирует контент для заполнения

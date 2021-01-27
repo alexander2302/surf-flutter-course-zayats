@@ -22,6 +22,7 @@ void generateTestSights() {
         'Кафедральный собор',
         53.9050742,
         27.5538739,
+        // 'https://www.dropbox.com/s/h8u5j977h2vfjre/place_1.JPG',
         'https://lh5.googleusercontent.com/p/AF1QipOP3V58gW-oDKFd3gRIdLK_1gJIQ5NJBtw_Lmol=w408-h270-k-no',
         'Самый «открыточный» храм города, который обычно изображают на всех видах сувениров из Минска. Собор в стиле барокко буквально возвышается над остальными зданиями Верхнего города, и его просто невозможно не увидеть, прогуливаясь по центру Минска.',
         SightType.iconicBuildings),

@@ -1,22 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:places/mocks.dart';
+import 'package:places/ui/screen/sight_card.dart';
+import 'package:places/assets/constant_strings.dart' as ConstantsStrings;
+import 'package:places/assets/constants_text_style.dart' as ConstantsTextStyle;
 
 /*
   * class for the application screen "List of Interests"
   * (will display a list with places around the user)
 */
-
-
-const String titleLine1w1 = 'С';
-const String titleLine1w2 = 'писок';
-const String titleLine2w1 = '\nи';
-const String titleLine2w2 = 'нтересных мест';
-
-const TextStyle textStyleForTitle = TextStyle(
-  color: Colors.black,
-  fontSize: 32,
-  fontWeight: FontWeight.w700,
-  fontFamily: 'RobotoBlack',
-);
 
 class SightListScreen extends StatefulWidget {
   @override
@@ -43,34 +34,25 @@ class _SightListScreenState extends State<SightListScreen> {
           preferredSize: Size.fromHeight(64),
           child: Container(
             width: double.infinity,
-            margin: EdgeInsets.only(left: 16.0, right: 16.0),
+            margin: EdgeInsets.only(
+              left: 16.0,
+              right: 16.0,
+            ),
             child: RichText(
               text: TextSpan(
-                style: textStyleForTitle,
+                style: ConstantsTextStyle.appBarTitleStyle,
                 children: [
                   TextSpan(
                     children: [
                       TextSpan(
-                        text: titleLine1w1,
-                        style: TextStyle(
-                          color: Color.fromARGB(255, 103, 171, 91),
-                        ),
-                      ),
-                      TextSpan(
-                        text: titleLine1w2,
+                        text: ConstantsStrings.appBarTitleL1,
                       )
                     ],
                   ),
                   TextSpan(
                     children: [
                       TextSpan(
-                        text: titleLine2w1,
-                        style: TextStyle(
-                          color: Color.fromARGB(255, 248, 220, 94),
-                        ),
-                      ),
-                      TextSpan(
-                        text: titleLine2w2,
+                        text: ConstantsStrings.appBarTitleL2,
                       )
                     ],
                   ),
@@ -82,6 +64,23 @@ class _SightListScreenState extends State<SightListScreen> {
           ),
         ),
       ),
+      body: Center(
+          child: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            getCard(0),
+            getCard(1),
+            getCard(2),
+            getCard(3),
+          ],
+        ),
+      )),
+    );
+  }
+
+  SightCard getCard(int index) {
+    return new SightCard(
+      sight: mocks[index],
     );
   }
 }

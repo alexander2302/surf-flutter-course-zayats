@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:places/domain/sight.dart';
+import 'package:places/assets/constant_strings.dart' as ConstantsStrings;
 import 'package:places/assets/constants_color.dart' as ConstantsColor;
+import 'package:places/assets/constants_forms.dart' as ConstantsForms;
+import 'package:places/assets/constants_image.dart' as ConstantsImage;
+import 'package:places/assets/constants_text_style.dart' as ConstantsTextStyle;
 
 class SightDetails extends StatelessWidget {
   const SightDetails({
@@ -26,7 +30,7 @@ class SightDetails extends StatelessWidget {
                     fit: BoxFit.fitHeight,
                     alignment: Alignment.topCenter,
                   ),
-                  color: ConstantsColor.CARD_Background,
+                  color: ConstantsColor.cardBackground,
                 ),
               ),
               Container(
@@ -39,7 +43,7 @@ class SightDetails extends StatelessWidget {
                   sight.name,
                   maxLines: 2,
                   style: TextStyle(
-                    color: ConstantsColor.WHITE_Secondary,
+                    color: ConstantsColor.whiteSecondary,
                     fontSize: 24,
                     fontWeight: FontWeight.w700,
                   ),
@@ -53,11 +57,7 @@ class SightDetails extends StatelessWidget {
                 ),
                 child: Text(
                   sight.getTypeName(),
-                  style: TextStyle(
-                    color: ConstantsColor.WHITE_Secondary,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w700,
-                  ),
+                  style: ConstantsTextStyle.whiteSecondaryS14W700,
                 ),
               ),
               Container(
@@ -69,11 +69,7 @@ class SightDetails extends StatelessWidget {
                 ),
                 child: Text(
                   sight.details,
-                  style: TextStyle(
-                    color: ConstantsColor.WHITE_Secondary,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w400,
-                  ),
+                  style: ConstantsTextStyle.whiteSecondaryS14W400,
                 ),
               ),
               Center(
@@ -85,27 +81,21 @@ class SightDetails extends StatelessWidget {
                       borderRadius: BorderRadius.circular(12.0),
                     ),
                     onPressed: () => {},
-                    color: ConstantsColor.GREEN_BTN,
+                    color: ConstantsColor.greenBtn,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       // Replace with a Row for horizontal icon + text
                       children: <Widget>[
                         new Image.asset(
-                          'assets/images/icon/routeBtn.png',
+                          ConstantsImage.route,
                           width: 20,
                           height: 18,
                         ),
                         Container(
-                          margin: const EdgeInsets.only(
-                            left: 8,
-                          ),
+                          margin: ConstantsForms.left8,
                           child: Text(
-                            "ПОСТРОИТЬ МАРШРУТ",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w700,
-                            ),
+                            ConstantsStrings.buildRoute,
+                            style: ConstantsTextStyle.whiteS14W700,
                           ),
                         ),
                       ],
@@ -115,7 +105,11 @@ class SightDetails extends StatelessWidget {
               ),
               Container(
                 margin: const EdgeInsets.only(
-                    left: 16, right: 16, top: 24, bottom: 8),
+                  left: 16,
+                  right: 16,
+                  top: 24,
+                  bottom: 8,
+                ),
                 child: Divider(
                   color: Colors.black,
                 ),
@@ -128,10 +122,9 @@ class SightDetails extends StatelessWidget {
                     onPressed: () => {},
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      // Replace with a Row for horizontal icon + text
                       children: <Widget>[
                         new Image.asset(
-                          'assets/images/icon/calendar.png',
+                          ConstantsImage.calendar,
                           width: 20,
                           height: 18,
                         ),
@@ -140,9 +133,9 @@ class SightDetails extends StatelessWidget {
                             left: 8,
                           ),
                           child: Text(
-                            "Запланировать",
+                            ConstantsStrings.schedule,
                             style: TextStyle(
-                              color: ConstantsColor.INACTIVE_BLACK,
+                              color: ConstantsColor.blackInactive,
                               fontSize: 14,
                               fontWeight: FontWeight.w400,
                             ),
@@ -156,10 +149,9 @@ class SightDetails extends StatelessWidget {
                     onPressed: () => {},
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      // Replace with a Row for horizontal icon + text
                       children: <Widget>[
                         new Image.asset(
-                          'assets/images/icon/heart2.png',
+                          ConstantsImage.heart2,
                           width: 20,
                           height: 18,
                         ),
@@ -168,12 +160,8 @@ class SightDetails extends StatelessWidget {
                             left: 8,
                           ),
                           child: Text(
-                            "В Избранное",
-                            style: TextStyle(
-                              color: ConstantsColor.WHITE_Secondary,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w400,
-                            ),
+                            ConstantsStrings.favorites,
+                            style: ConstantsTextStyle.whiteSecondaryS14W400,
                           ),
                         ),
                       ],

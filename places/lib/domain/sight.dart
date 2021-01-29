@@ -16,8 +16,14 @@ class Sight {
   String details; //описание достопримечательности
   SightType type; //тип достопримечательности
 
-  Sight(String name, double lat, double lon, String url, String details,
-      SightType type) {
+  Sight(
+    String name,
+    double lat,
+    double lon,
+    String url,
+    String details,
+    SightType type,
+  ) {
     this.name = name;
     this.lat = lat;
     this.lon = lon;

@@ -40,7 +40,7 @@ class _SightListScreenState extends State<SightListScreen> {
             ),
             child: RichText(
               text: TextSpan(
-                style: ConstantsTextStyle.appBarTitleStyle,
+                style: ConstantsTextStyle.blackS32W700,
                 children: [
                   TextSpan(
                     children: [

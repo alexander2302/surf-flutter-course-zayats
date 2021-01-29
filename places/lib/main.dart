@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:places/ui/screen/sight_list_screen.dart';
+import 'package:places/ui/screen/sight_details.dart';
 import 'package:places/mocks.dart';
 
 void main() {
@@ -13,11 +14,12 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(fontFamily: 'RobotoBlack'),
+      //theme: ThemeData(fontFamily: 'RobotoBlack'),
       // home: const MyHomePage(title: 'Flutter1'),
       // home: MyFirstWidget(title: 'Flutter Demo Home Page'),
       // home: MySecondWidget(),
-      home: SightListScreen(),
+      // home: SightListScreen(),
+      home: SightDetails(sight: mocks[1]),
     );
   }
 }

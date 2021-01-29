@@ -25,7 +25,7 @@ flutter:
 
   assets:
     - res/    
-    - assets/images/icon/heart.png
+    - assets/images/icon/    
 
   fonts:
     - family: RobotoBlack

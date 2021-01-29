@@ -5,6 +5,10 @@ const EdgeInsets top16 = const EdgeInsets.only(
   top: 16,
 );
 
+const EdgeInsets left8 = const EdgeInsets.only(
+  left: 8,
+);
+
 const EdgeInsets left16Top16 = const EdgeInsets.only(
   left: 16,
   top: 16,

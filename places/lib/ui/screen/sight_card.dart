@@ -44,7 +44,7 @@ class SightCard extends StatelessWidget {
                   Text(
                     sight.getTypeName(),
                     maxLines: 1,
-                    style: ConstantsTextStyle.whiteTitleStyle,
+                    style: ConstantsTextStyle.whiteS14W700,
                   ),
                   IconButton(
                     padding: const EdgeInsets.only(bottom: 20),
@@ -78,13 +78,13 @@ class SightCard extends StatelessWidget {
                   Text(
                     sight.name,
                     maxLines: 2,
-                    style: ConstantsTextStyle.whiteSecondaryTitleStyle,
+                    style: ConstantsTextStyle.whiteSecondaryS16W500,
                   ),
                   Text(
                     sight.details,
                     overflow: TextOverflow.ellipsis,
                     maxLines: 2,
-                    style: ConstantsTextStyle.whiteSecondary2TitleStyle,
+                    style: ConstantsTextStyle.whiteSecondary2S14W400,
                   ),
                 ],
               ),

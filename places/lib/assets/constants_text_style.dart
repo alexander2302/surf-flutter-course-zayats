@@ -8,6 +8,7 @@ const TextStyle blackS32W700 = TextStyle(
   fontSize: 32,
   fontWeight: FontWeight.w700,
   fontFamily: 'RobotoBlack',
+  fontStyle: FontStyle.normal,
 );
 
 TextStyle whiteS14W700 = const TextStyle(

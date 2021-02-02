@@ -6,6 +6,11 @@ import 'package:places/assets/constants_forms.dart' as ConstantsForms;
 import 'package:places/assets/constants_image.dart' as ConstantsImage;
 import 'package:places/assets/constants_text_style.dart' as ConstantsTextStyle;
 
+/*
+ * Класс отвечает за отображение "открытого" состояния достопримечательности с
+ * копками действия
+*/
+
 class SightDetails extends StatelessWidget {
   const SightDetails({
     Key key,

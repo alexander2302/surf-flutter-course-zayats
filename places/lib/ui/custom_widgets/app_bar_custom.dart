@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:places/assets/constants_forms.dart' as ConstantsForms;
 import 'package:places/assets/constants_text_style.dart' as ConstantsTextStyle;
 
+/*
+ * Класс отвечает за кастомный AppBar с предпочитаемым размером для родителя
+*/
 class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
   final String title;
 

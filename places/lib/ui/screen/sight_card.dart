@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:places/domain/sight.dart';
 
-import 'package:places/assets/constant_numbers.dart' as ConstantsNumber;
 import 'package:places/assets/constants_color.dart' as ConstantsColor;
 import 'package:places/assets/constants_forms.dart' as ConstantsForms;
 import 'package:places/assets/constants_image.dart' as ConstantsImage;
@@ -27,8 +26,8 @@ class SightCard extends StatelessWidget {
         children: [
           //описана верхняя картинка и тип
           SizedBox(
-            width: ConstantsNumber.sightCardWidht,
-            height: ConstantsNumber.sightCardHeight1,
+            width: 328,
+            height: 96,
             child: Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
@@ -72,10 +71,10 @@ class SightCard extends StatelessWidget {
           //данный ConstrainedBox содержит краткое описание
           ConstrainedBox(
             constraints: BoxConstraints(
-              minWidth: ConstantsNumber.sightCardWidht,
-              minHeight: ConstantsNumber.sightCardHeight2,
-              maxWidth: ConstantsNumber.sightCardWidht,
-              maxHeight: ConstantsNumber.sightCardHeight2,
+              minWidth: 328,
+              minHeight: 92,
+              maxWidth: 328,
+              maxHeight: 92,
             ),
             child: Container(
               alignment: Alignment.topLeft,

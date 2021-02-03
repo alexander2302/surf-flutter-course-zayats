@@ -18,8 +18,8 @@ class App extends StatelessWidget {
       // home: const MyHomePage(title: 'Flutter1'),
       // home: MyFirstWidget(title: 'Flutter Demo Home Page'),
       // home: MySecondWidget(),
-      home: SightListScreen(),
-      // home: SightDetails(sight: mocks[1]),
+      // home: SightListScreen(),
+      home: SightDetails(sight: mocks[1]),
     );
   }
 }

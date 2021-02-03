@@ -21,52 +21,69 @@ class SightCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(
+        color: ConstantsColor.cardBackground,
+        borderRadius: ConstantsForms.radAll16,
+      ),
       margin: ConstantsForms.top16,
       child: Column(
         children: [
-          //описана верхняя картинка и тип
-          SizedBox(
-            width: 328,
-            height: 96,
-            child: Container(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: NetworkImage(sight.url),
-                  fit: BoxFit.cover,
+          //данный Widget содержит название категории и кнопку изббранное
+          ClipRRect(
+            borderRadius: ConstantsForms.radTopLett16TopRight16,
+            child: new Stack(
+              children: <Widget>[
+                new SizedBox(
+                  width: 328,
+                  height: 96,
+                  child: Image.network(
+                    sight.url,
+                    fit: BoxFit.fitWidth,
+                    loadingBuilder: (BuildContext context, Widget child,
+                        ImageChunkEvent loadingProgress) {
+                      if (loadingProgress == null) return child;
+                      return Center(
+                        child: CircularProgressIndicator(
+                          value: loadingProgress.expectedTotalBytes != null
+                              ? loadingProgress.cumulativeBytesLoaded /
+                                  loadingProgress.expectedTotalBytes
+                              : null,
+                        ),
+                      );
+                    },
+                  ),
                 ),
-                color: ConstantsColor.cardBackground,
-                borderRadius: ConstantsForms.radTopLett16TopRight16,
-              ),
-              child: Container(
-                margin: ConstantsForms.left16Top16,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    Text(
-                      sight.getTypeName(),
-                      maxLines: 1,
-                      style: ConstantsTextStyle.whiteS14W700,
+                new SizedBox(
+                  width: 328,
+                  height: 96,
+                  child: new Container(
+                    margin: ConstantsForms.left16Top16,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text(
+                          sight.getTypeName(),
+                          maxLines: 1,
+                          style: ConstantsTextStyle.whiteS14W700,
+                        ),
+                        IconButton(
+                          padding: const EdgeInsets.only(bottom: 20),
+                          icon: new Image.asset(
+                            ConstantsImage.heart,
+                            width: 20,
+                            height: 18,
+                          ),
+                          onPressed: () {},
+                        ),
+                      ],
                     ),
-                    IconButton(
-                      padding: const EdgeInsets.only(bottom: 20),
-                      icon: new Image.asset(
-                        ConstantsImage.heart,
-                        width: 20,
-                        height: 18,
-                      ),
-                      onPressed: () {},
-                    ),
-                  ],
+                  ),
                 ),
-              ),
+              ],
             ),
           ),
-
-          //для пункта 2 : Добавьте отступ между между фотографиями и описанием...
-          //можно было бы вот так разделить (с настройками) ->
-          // const SizedBox(height: 16),
-          //если моя реализация будет ошибочна - переделаю
+          //описана верхняя картинка и тип
 
           //данный ConstrainedBox содержит краткое описание
           ConstrainedBox(
@@ -78,10 +95,6 @@ class SightCard extends StatelessWidget {
             ),
             child: Container(
               alignment: Alignment.topLeft,
-              decoration: BoxDecoration(
-                color: ConstantsColor.cardBackground,
-                borderRadius: ConstantsForms.radBotLeft16BotRight16,
-              ),
               child: Container(
                 margin: ConstantsForms.all16,
                 alignment: Alignment.topLeft,

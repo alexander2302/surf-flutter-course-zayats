@@ -27,15 +27,24 @@ class SightDetails extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
+              //widget загрузки картинки с ппрогресс баром
+              SizedBox(
                 height: 360,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: NetworkImage(sight.url),
-                    fit: BoxFit.fitHeight,
-                    alignment: Alignment.topCenter,
-                  ),
-                  color: ConstantsColor.cardBackground,
+                child: Image.network(
+                  sight.url,
+                  fit: BoxFit.fitHeight,
+                  loadingBuilder: (BuildContext context, Widget child,
+                      ImageChunkEvent loadingProgress) {
+                    if (loadingProgress == null) return child;
+                    return Center(
+                      child: CircularProgressIndicator(
+                        value: loadingProgress.expectedTotalBytes != null
+                            ? loadingProgress.cumulativeBytesLoaded /
+                                loadingProgress.expectedTotalBytes
+                            : null,
+                      ),
+                    );
+                  },
                 ),
               ),
               Container(

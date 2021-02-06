@@ -36,3 +36,10 @@ const BorderRadius radBotLeft16BotRight16 = const BorderRadius.only(
   bottomLeft: Radius.circular(16),
   bottomRight: Radius.circular(16),
 );
+
+const BorderRadius radAll16 = const BorderRadius.only(
+  bottomLeft: Radius.circular(16),
+  bottomRight: Radius.circular(16),
+  topLeft: Radius.circular(16),
+  topRight: Radius.circular(16),
+);

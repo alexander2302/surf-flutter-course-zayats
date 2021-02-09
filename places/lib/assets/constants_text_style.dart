@@ -52,3 +52,10 @@ TextStyle whiteSecondary2S14W700 = const TextStyle(
   fontWeight: FontWeight.w700,
   fontStyle: FontStyle.normal,
 );
+
+TextStyle whiteMainS18W500 = const TextStyle(
+  fontSize: 18,
+  color: ConstantsColor.whiteMain,
+  fontWeight: FontWeight.w500,
+  fontStyle: FontStyle.normal,
+);

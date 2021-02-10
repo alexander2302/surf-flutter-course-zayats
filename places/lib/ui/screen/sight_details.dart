@@ -95,7 +95,7 @@ class SightDetails extends StatelessWidget {
                       borderRadius: BorderRadius.circular(12.0),
                     ),
                     onPressed: () => {},
-                    color: ConstantsColor.greenBtn,
+                    color: ConstantsColor.green,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       // Replace with a Row for horizontal icon + text

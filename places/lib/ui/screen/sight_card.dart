@@ -22,7 +22,7 @@ class SightCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: ConstantsColor.cardBackground,
+        color: ConstantsColor.gray,
         borderRadius: ConstantsForms.radAll16,
       ),
       margin: ConstantsForms.top16,

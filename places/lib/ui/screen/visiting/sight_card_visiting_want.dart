@@ -22,7 +22,7 @@ class SightCardVisitingWant extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: ConstantsColor.cardBackground,
+        color: ConstantsColor.gray,
         borderRadius: ConstantsForms.radAll16,
       ),
       margin: ConstantsForms.top16,
@@ -111,7 +111,6 @@ class SightCardVisitingWant extends StatelessWidget {
               minWidth: 328,
               minHeight: 92,
               maxWidth: 328,
-              maxHeight: 92,
             ),
             child: Container(
               alignment: Alignment.topLeft,
@@ -127,12 +126,27 @@ class SightCardVisitingWant extends StatelessWidget {
                       maxLines: 2,
                       style: ConstantsTextStyle.whiteSecondaryS16W500,
                     ),
+                    ConstrainedBox(
+                      constraints: BoxConstraints(
+                        minHeight: 28,
+                        maxHeight: 28,
+                      ),
+                      child: Padding(
+                        padding: ConstantsForms.top2,
+                        child: Text(
+                          "Запланировано на 12 окт. 2020",
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 2,
+                          style: ConstantsTextStyle.greenS14W400,
+                        ),
+                      ),
+                    ),
                     Text(
-                      sight.details,
+                      "закрыто до 09:00",
                       overflow: TextOverflow.ellipsis,
                       maxLines: 2,
                       style: ConstantsTextStyle.whiteSecondary2S14W400,
-                    ),
+                    )
                   ],
                 ),
               ),

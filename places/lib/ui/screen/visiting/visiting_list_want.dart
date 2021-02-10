@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:places/ui/screen/visiting/sight_card_visiting_want.dart';
-import '../../../mocks.dart';
+import 'package:places/mocks.dart';
 
 class VisitingListWant extends StatefulWidget {
   @override

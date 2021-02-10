@@ -39,6 +39,13 @@ TextStyle whiteSecondary2S14W400 = const TextStyle(
   fontStyle: FontStyle.normal,
 );
 
+TextStyle greenS14W400 = const TextStyle(
+  fontSize: 14,
+  color: ConstantsColor.green,
+  fontWeight: FontWeight.w400,
+  fontStyle: FontStyle.normal,
+);
+
 TextStyle whiteSecondaryS14W400 = const TextStyle(
   fontSize: 14,
   color: ConstantsColor.whiteSecondary,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:places/assets/constant_strings.dart' as ConstantsStrings;
 import 'package:places/assets/constants_text_style.dart' as ConstantsTextStyle;
+import 'package:places/assets/constants_color.dart' as ConstantsColor;
 import 'package:places/ui/screen/visiting/visiting_list_visited.dart';
 import 'package:places/ui/screen/visiting/visiting_list_want.dart';
 
@@ -25,15 +26,38 @@ class _VisitingScreenState extends State<VisitingScreen> {
         length: 2,
         child: Scaffold(
           appBar: AppBar(
-            bottom: TabBar(
-              tabs: [
-                Tab(
-                  text: ConstantsStrings.tabWantToVisit,
+            elevation: 0,
+            backgroundColor: Colors.white,
+            bottom: PreferredSize(
+              preferredSize: new Size(
+                360.0,
+                40.0,
+              ),
+              child: Container(
+                decoration: new BoxDecoration(
+                  color: ConstantsColor.gray,
+                  shape: BoxShape.rectangle,
+                  borderRadius: BorderRadius.all(Radius.circular(40)),
                 ),
-                Tab(
-                  text: ConstantsStrings.tabPlaceVisited,
+                width: 328,
+                height: 40,
+                child: TabBar(
+                  indicator: BoxDecoration(
+                    color: Colors.orange,
+                    borderRadius: BorderRadius.circular(40),
+                  ),
+                  unselectedLabelColor: ConstantsColor.blackInactive,
+                  labelColor: Colors.white,
+                  tabs: [
+                    Tab(
+                      text: ConstantsStrings.tabWantToVisit,
+                    ),
+                    Tab(
+                      text: ConstantsStrings.tabPlaceVisited,
+                    ),
+                  ],
                 ),
-              ],
+              ),
             ),
             title: Center(
               child: Text(

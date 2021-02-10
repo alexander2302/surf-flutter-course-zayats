@@ -1,6 +1,10 @@
 import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 
+const EdgeInsets top2 = const EdgeInsets.only(
+  top: 2,
+);
+
 const EdgeInsets top16 = const EdgeInsets.only(
   top: 16,
 );

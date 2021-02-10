@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:places/ui/screen/visiting/sight_card_visiting_want.dart';
-import '../../../mocks.dart';
+import 'package:places/ui/screen/visiting/sight_card_visiting_visited.dart';
+import 'package:places/mocks.dart';
 
 class VisitingListVisited extends StatefulWidget {
   @override
@@ -30,8 +30,8 @@ class _SightListScreenState extends State<VisitingListVisited> {
     );
   }
 
-  SightCardVisitingWant getCard(int index) {
-    return new SightCardVisitingWant(
+  SightCardVisitingVisited getCard(int index) {
+    return new SightCardVisitingVisited(
       sight: mocks[index],
     );
   }

@@ -5,9 +5,9 @@ import 'package:places/assets/constants_forms.dart' as ConstantsForms;
 import 'package:places/assets/constants_image.dart' as ConstantsImage;
 import 'package:places/assets/constants_text_style.dart' as ConstantsTextStyle;
 
-//This class helps in visualizing a card with a summary of an unknown place
-class SightCard extends StatelessWidget {
-  const SightCard({
+//This class helps in visualizing tab for places we want to visit
+class SightCardVisitingWant extends StatelessWidget {
+  const SightCardVisitingWant({
     Key key,
     this.sight,
   }) : super(key: key);
@@ -32,7 +32,7 @@ class SightCard extends StatelessWidget {
   }
 }
 
-//This Widget contains the category name and the favorite button
+//This Widget contains category name and buttons
 Widget _buildCardHeared(Sight sight) {
   return ClipRRect(
     borderRadius: ConstantsForms.radTopLett16TopRight16,
@@ -72,15 +72,35 @@ Widget _buildCardHeared(Sight sight) {
                   maxLines: 1,
                   style: ConstantsTextStyle.whiteS14W700,
                 ),
-                IconButton(
-                  padding: const EdgeInsets.only(bottom: 20),
-                  icon: Image.asset(
-                    ConstantsImage.heart,
-                    width: 20,
-                    height: 18,
+                Stack(children: <Widget>[
+                  IconButton(
+                    padding: const EdgeInsets.only(
+                      bottom: 20,
+                      right: 28,
+                    ),
+                    icon: Image.asset(
+                      ConstantsImage.calendarWhite,
+                      color: Colors.white,
+                      width: 24,
+                      height: 24,
+                    ),
+                    onPressed: () {},
                   ),
-                  onPressed: () {},
-                ),
+                  IconButton(
+                    padding: const EdgeInsets.only(
+                      bottom: 20,
+                      left: 42,
+                      right: 20,
+                    ),
+                    icon: Image.asset(
+                      ConstantsImage.union,
+                      color: Colors.white,
+                      width: 24,
+                      height: 24,
+                    ),
+                    onPressed: () {},
+                  ),
+                ]),
               ],
             ),
           ),
@@ -97,7 +117,6 @@ Widget _buildCardDescription(Sight sight) {
       minWidth: 328,
       minHeight: 92,
       maxWidth: 328,
-      maxHeight: 92,
     ),
     child: Container(
       alignment: Alignment.topLeft,
@@ -113,12 +132,27 @@ Widget _buildCardDescription(Sight sight) {
               maxLines: 2,
               style: ConstantsTextStyle.whiteSecondaryS16W500,
             ),
+            ConstrainedBox(
+              constraints: BoxConstraints(
+                minHeight: 28,
+                maxHeight: 28,
+              ),
+              child: Padding(
+                padding: ConstantsForms.top2,
+                child: Text(
+                  "Запланировано на 12 окт. 2020",
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 2,
+                  style: ConstantsTextStyle.greenS14W400,
+                ),
+              ),
+            ),
             Text(
-              sight.details,
+              "закрыто до 09:00",
               overflow: TextOverflow.ellipsis,
               maxLines: 2,
               style: ConstantsTextStyle.whiteSecondary2S14W400,
-            ),
+            )
           ],
         ),
       ),

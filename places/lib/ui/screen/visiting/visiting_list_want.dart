@@ -1,22 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:places/ui/screen/visiting/sight_card_visiting_want.dart';
 import 'package:places/mocks.dart';
-import 'package:places/ui/screen/sight_card.dart';
-import 'package:places/assets/constant_strings.dart' as ConstantsStrings;
-import 'package:places/ui/custom_widgets/app_bar_custom.dart';
 
-//This class for the application screen "List of Interests"
-//(will display a list with places around the user)
-class SightListScreen extends StatefulWidget {
+//This widget is responsible for displaying / forming a list of places
+//for the tab withs "I want to visit"
+class VisitingListWant extends StatefulWidget {
   @override
   _SightListScreenState createState() => _SightListScreenState();
 }
 
-class _SightListScreenState extends State<SightListScreen> {
+class _SightListScreenState extends State<VisitingListWant> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBarCustom(title: ConstantsStrings.appBarTitleL),
       body: Center(
           child: SingleChildScrollView(
         child: Column(
@@ -31,8 +28,8 @@ class _SightListScreenState extends State<SightListScreen> {
     );
   }
 
-  SightCard getCard(int index) {
-    return SightCard(
+  SightCardVisitingWant getCard(int index) {
+    return new SightCardVisitingWant(
       sight: mocks[index],
     );
   }

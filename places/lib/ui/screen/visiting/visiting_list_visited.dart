@@ -2,15 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:places/ui/screen/visiting/sight_card_visiting_visited.dart';
 import 'package:places/mocks.dart';
 
+//This widget is responsible for displaying / forming a list of places
+//for the tab withs "Visited Places"
 class VisitingListVisited extends StatefulWidget {
   @override
   _SightListScreenState createState() => _SightListScreenState();
 }
 
-/*
- * Данный виджет отвечает за отображение/формирование списка мест для таба 
- * "Посещенные места"
-*/
 class _SightListScreenState extends State<VisitingListVisited> {
   @override
   Widget build(BuildContext context) {

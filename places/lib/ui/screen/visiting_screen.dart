@@ -5,12 +5,9 @@ import 'package:places/assets/constants_color.dart' as ConstantsColor;
 import 'package:places/ui/screen/visiting/visiting_list_visited.dart';
 import 'package:places/ui/screen/visiting/visiting_list_want.dart';
 
-/*
-  * Данный класс отвечате за отображение табов с вкладками
-  * - Хочу посетить
-  * - Посещенные места
-*/
-
+//This class is responsible for displaying tabs with tabs
+// - I want to visit
+// - Places visited
 class VisitingScreen extends StatefulWidget {
   const VisitingScreen({Key key}) : super(key: key);
 
@@ -29,12 +26,12 @@ class _VisitingScreenState extends State<VisitingScreen> {
             elevation: 0,
             backgroundColor: Colors.white,
             bottom: PreferredSize(
-              preferredSize: new Size(
+              preferredSize: Size(
                 360.0,
                 40.0,
               ),
               child: Container(
-                decoration: new BoxDecoration(
+                decoration: BoxDecoration(
                   color: ConstantsColor.gray,
                   shape: BoxShape.rectangle,
                   borderRadius: BorderRadius.all(Radius.circular(40)),

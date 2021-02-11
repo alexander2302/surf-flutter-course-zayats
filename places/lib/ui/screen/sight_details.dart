@@ -6,11 +6,8 @@ import 'package:places/assets/constants_forms.dart' as ConstantsForms;
 import 'package:places/assets/constants_image.dart' as ConstantsImage;
 import 'package:places/assets/constants_text_style.dart' as ConstantsTextStyle;
 
-/*
- * Класс отвечает за отображение "открытого" состояния достопримечательности с
- * копками действия
-*/
-
+//The class is responsible for displaying the "open" state of the
+//attraction with action buttons
 class SightDetails extends StatelessWidget {
   const SightDetails({
     Key key,
@@ -27,7 +24,7 @@ class SightDetails extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              //widget загрузки картинки с ппрогресс баром
+              //widget loading a picture with a progress bar
               SizedBox(
                 height: 360,
                 child: Image.network(
@@ -98,9 +95,9 @@ class SightDetails extends StatelessWidget {
                     color: ConstantsColor.green,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      // Replace with a Row for horizontal icon + text
+                      //Replace with a Row for horizontal icon + text
                       children: <Widget>[
-                        new Image.asset(
+                        Image.asset(
                           ConstantsImage.route,
                           width: 20,
                           height: 18,
@@ -128,7 +125,7 @@ class SightDetails extends StatelessWidget {
                   color: Colors.black,
                 ),
               ),
-              new Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   FlatButton(
@@ -137,7 +134,7 @@ class SightDetails extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        new Image.asset(
+                        Image.asset(
                           ConstantsImage.calendar,
                           width: 20,
                           height: 18,
@@ -164,7 +161,7 @@ class SightDetails extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        new Image.asset(
+                        Image.asset(
                           ConstantsImage.heart2,
                           width: 20,
                           height: 18,

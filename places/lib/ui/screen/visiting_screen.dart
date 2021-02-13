@@ -18,41 +18,39 @@ class VisitingScreen extends StatefulWidget {
 class _VisitingScreenState extends State<VisitingScreen> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: DefaultTabController(
+    return Scaffold(
+      body: DefaultTabController(
         length: 2,
         child: Scaffold(
           appBar: AppBar(
             elevation: 0,
-            backgroundColor: Colors.white,
+            backgroundColor: Theme.of(context).scaffoldBackgroundColor,
             bottom: PreferredSize(
               preferredSize: Size(
                 360.0,
-                40.0,
+                46.0,
               ),
-              child: Container(
-                decoration: BoxDecoration(
-                  color: ConstantsColor.gray,
-                  shape: BoxShape.rectangle,
-                  borderRadius: BorderRadius.all(Radius.circular(40)),
+              child: Padding(
+                padding: const EdgeInsets.only(
+                  bottom: 6,
                 ),
-                width: 328,
-                height: 40,
-                child: TabBar(
-                  indicator: BoxDecoration(
-                    color: Colors.orange,
-                    borderRadius: BorderRadius.circular(40),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).primaryColor,
+                    borderRadius: BorderRadius.all(Radius.circular(40)),
                   ),
-                  unselectedLabelColor: ConstantsColor.blackInactive,
-                  labelColor: Colors.white,
-                  tabs: [
-                    Tab(
-                      text: ConstantsStrings.tabWantToVisit,
-                    ),
-                    Tab(
-                      text: ConstantsStrings.tabPlaceVisited,
-                    ),
-                  ],
+                  width: 338,
+                  height: 40,
+                  child: TabBar(
+                    tabs: [
+                      Tab(
+                        text: ConstantsStrings.tabWantToVisit,
+                      ),
+                      Tab(
+                        text: ConstantsStrings.tabPlaceVisited,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -60,7 +58,9 @@ class _VisitingScreenState extends State<VisitingScreen> {
               child: Text(
                 ConstantsStrings.tabBarTitle,
                 textAlign: TextAlign.center,
-                style: ConstantsTextStyle.whiteMainS18W500,
+                style: ConstantsTextStyle.whiteMainS18W500.copyWith(
+                  color: Theme.of(context).accentColor,
+                ),
               ),
             ),
           ),

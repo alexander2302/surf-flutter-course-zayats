@@ -4,7 +4,7 @@ import 'package:flutter/painting.dart';
 import 'package:places/assets/constants_color.dart' as ConstantsColor;
 
 const TextStyle blackS32W700 = TextStyle(
-  color: Colors.black,
+  color: ConstantsColor.whiteSecondary,
   fontSize: 32,
   fontWeight: FontWeight.w700,
   fontFamily: 'RobotoBlack',

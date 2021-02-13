@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:places/domain/sight.dart';
-import 'package:places/assets/constants_color.dart' as ConstantsColor;
 import 'package:places/assets/constants_forms.dart' as ConstantsForms;
 import 'package:places/assets/constants_image.dart' as ConstantsImage;
 import 'package:places/assets/constants_text_style.dart' as ConstantsTextStyle;
@@ -18,7 +17,7 @@ class SightCardVisitingVisited extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: ConstantsColor.gray,
+        color: Theme.of(context).primaryColor,
         borderRadius: ConstantsForms.radAll16,
       ),
       margin: ConstantsForms.top16,

@@ -24,7 +24,9 @@ class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
           overflow: TextOverflow.ellipsis,
           textAlign: TextAlign.left,
           maxLines: 2,
-          style: ConstantsTextStyle.blackS32W700,
+          style: ConstantsTextStyle.blackS32W700.copyWith(
+            color: Theme.of(context).accentColor,
+          ),
         ),
       ),
     );

@@ -18,7 +18,7 @@ class SightCardVisitingWant extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: ConstantsColor.gray,
+        color: Theme.of(context).primaryColor,
         borderRadius: ConstantsForms.radAll16,
       ),
       margin: ConstantsForms.top16,

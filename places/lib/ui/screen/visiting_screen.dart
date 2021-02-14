@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:places/assets/constant_strings.dart' as ConstantsStrings;
 import 'package:places/assets/constants_text_style.dart' as ConstantsTextStyle;
-import 'package:places/assets/constants_color.dart' as ConstantsColor;
 import 'package:places/ui/screen/visiting/visiting_list_visited.dart';
 import 'package:places/ui/screen/visiting/visiting_list_want.dart';
 

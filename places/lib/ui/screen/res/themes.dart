@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:places/assets/constants_color.dart' as ConstantsColor;
 
 final lightTheme = ThemeData(
+  secondaryHeaderColor: Colors.red,
   accentColor: ConstantsColor.whiteMain,
   primaryColor: ConstantsColor.ltPrimaryColorGray,
   scaffoldBackgroundColor: Colors.white,
@@ -15,7 +16,7 @@ final lightTheme = ThemeData(
       color: ConstantsColor.whiteSecondary,
       borderRadius: BorderRadius.circular(40),
     ),
-    unselectedLabelColor: ConstantsColor.blackInactive,
+    unselectedLabelColor: ConstantsColor.whiteInactiveBlack,
     labelColor: Colors.white,
   ),
   splashColor: Colors.transparent,
@@ -23,6 +24,7 @@ final lightTheme = ThemeData(
 );
 
 final darkTheme = ThemeData(
+  secondaryHeaderColor: Colors.orange,
   accentColor: Colors.white,
   primaryColor: ConstantsColor.dtPrimaryColor,
   scaffoldBackgroundColor: ConstantsColor.dtBlackMain,
@@ -36,7 +38,7 @@ final darkTheme = ThemeData(
       color: ConstantsColor.whiteSecondary,
       borderRadius: BorderRadius.circular(40),
     ),
-    unselectedLabelColor: ConstantsColor.blackInactive,
+    unselectedLabelColor: ConstantsColor.whiteInactiveBlack,
     labelColor: Colors.white,
   ),
   splashColor: Colors.transparent,

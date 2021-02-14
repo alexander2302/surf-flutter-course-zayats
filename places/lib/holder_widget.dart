@@ -60,25 +60,25 @@ class _HolderWidgetState extends State<HolderWidget> {
           //list
           BottomNavigationBarItem(
             label: '',
-            icon: _buildIcon(ConstantsImage.navBarList, false),
-            activeIcon: _buildIcon(ConstantsImage.navBarListFull, true),
+            icon: _buildIcon(ConstantsImage.menuList, false),
+            activeIcon: _buildIcon(ConstantsImage.menuListFull, true),
           ),
           //map
           BottomNavigationBarItem(
             label: '',
-            icon: _buildIcon(ConstantsImage.navBarMap, false),
-            activeIcon: _buildIcon(ConstantsImage.navBarMapFull, true),
+            icon: _buildIcon(ConstantsImage.menuMap, false),
+            activeIcon: _buildIcon(ConstantsImage.menuMapFull, true),
           ),
           //heart
           BottomNavigationBarItem(
             label: '',
-            icon: _buildIcon(ConstantsImage.navBarHeart, false),
-            activeIcon: _buildIcon(ConstantsImage.navBarHeartFull, true),
+            icon: _buildIcon(ConstantsImage.menuHeart, false),
+            activeIcon: _buildIcon(ConstantsImage.menuHeartFull, true),
           ),
           BottomNavigationBarItem(
             label: '',
-            icon: _buildIcon(ConstantsImage.navBarSettings, false),
-            activeIcon: _buildIcon(ConstantsImage.navBarSettingsFill, true),
+            icon: _buildIcon(ConstantsImage.menuSettings, false),
+            activeIcon: _buildIcon(ConstantsImage.menuSettingsFull, true),
           ),
         ],
       ),

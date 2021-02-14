@@ -24,7 +24,7 @@ class SightCardVisitingVisited extends StatelessWidget {
       child: Column(
         children: [
           _buildCardHeared(sight),
-          _buildCardDescription(sight),
+          _buildCardDescription(sight, context),
         ],
       ),
     );
@@ -110,7 +110,7 @@ Widget _buildCardHeared(Sight sight) {
 }
 
 //This ConstrainedBox contains a short description
-Widget _buildCardDescription(Sight sight) {
+Widget _buildCardDescription(Sight sight, BuildContext context) {
   return ConstrainedBox(
     constraints: BoxConstraints(
       minWidth: 328,
@@ -129,7 +129,9 @@ Widget _buildCardDescription(Sight sight) {
             Text(
               sight.name,
               maxLines: 2,
-              style: ConstantsTextStyle.whiteSecondaryS16W500,
+              style: ConstantsTextStyle.whiteSecondaryS16W500.copyWith(
+                color: Theme.of(context).accentColor,
+              ),
             ),
             ConstrainedBox(
               constraints: BoxConstraints(
@@ -139,7 +141,8 @@ Widget _buildCardDescription(Sight sight) {
               child: Padding(
                 padding: ConstantsForms.top2,
                 child: Text(
-                  "Цель достигнута 12 окт. 2020",
+                  //TODO: will be replaced (temporary value)
+                  "Цель достигнута 12 окт. 2020", //
                   overflow: TextOverflow.ellipsis,
                   maxLines: 2,
                   style: ConstantsTextStyle.whiteSecondary2S14W400,
@@ -147,6 +150,7 @@ Widget _buildCardDescription(Sight sight) {
               ),
             ),
             Text(
+              //TODO: will be replaced (temporary value)
               "закрыто до 09:00",
               overflow: TextOverflow.ellipsis,
               maxLines: 2,

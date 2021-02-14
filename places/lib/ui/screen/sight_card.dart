@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:places/domain/sight.dart';
-import 'package:places/assets/constants_color.dart' as ConstantsColor;
 import 'package:places/assets/constants_forms.dart' as ConstantsForms;
 import 'package:places/assets/constants_image.dart' as ConstantsImage;
 import 'package:places/assets/constants_text_style.dart' as ConstantsTextStyle;
@@ -26,7 +25,7 @@ class SightCard extends StatelessWidget {
       child: Column(
         children: [
           _buildCardHeared(sight),
-          _buildCardDescription(sight),
+          _buildCardDescription(sight, context),
         ],
       ),
     );
@@ -92,7 +91,7 @@ Widget _buildCardHeared(Sight sight) {
 }
 
 //This ConstrainedBox contains a short description
-Widget _buildCardDescription(Sight sight) {
+Widget _buildCardDescription(Sight sight, BuildContext context) {
   return ConstrainedBox(
     constraints: BoxConstraints(
       minWidth: 328,
@@ -112,7 +111,9 @@ Widget _buildCardDescription(Sight sight) {
             Text(
               sight.name,
               maxLines: 2,
-              style: ConstantsTextStyle.whiteSecondaryS16W500,
+              style: ConstantsTextStyle.whiteSecondaryS16W500.copyWith(
+                color: Theme.of(context).accentColor,
+              ),
             ),
             Text(
               sight.details,

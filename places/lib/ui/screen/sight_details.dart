@@ -146,7 +146,7 @@ class SightDetails extends StatelessWidget {
                           child: Text(
                             ConstantsStrings.schedule,
                             style: TextStyle(
-                              color: ConstantsColor.blackInactive,
+                              color: ConstantsColor.whiteInactiveBlack,
                               fontSize: 14,
                               fontWeight: FontWeight.w400,
                             ),

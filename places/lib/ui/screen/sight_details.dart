@@ -55,7 +55,7 @@ class SightDetails extends StatelessWidget {
                   color: Colors.black,
                 ),
               ),
-              _buildBotBtns(),
+              _buildBotBtns(context),
             ],
           ),
         ),
@@ -119,7 +119,7 @@ class SightDetails extends StatelessWidget {
     );
   }
 
-  Widget _buildBotBtns() {
+  Widget _buildBotBtns(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -133,18 +133,13 @@ class SightDetails extends StatelessWidget {
                 images.calendar,
                 width: 24,
                 height: 24,
+                color: Theme.of(context).accentColor,
               ),
               Container(
-                margin: const EdgeInsets.only(
-                  left: 8,
-                ),
+                margin: forms.left8,
                 child: Text(
                   strings.schedule,
-                  style: TextStyle(
-                    color: colors.whiteInactiveBlack,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w400,
-                  ),
+                  style: styles.normalS14W400whiteSecondary,
                 ),
               ),
             ],
@@ -160,6 +155,7 @@ class SightDetails extends StatelessWidget {
                 images.heart2,
                 width: 24,
                 height: 24,
+                color: Theme.of(context).accentColor,
               ),
               Container(
                 margin: forms.left8,

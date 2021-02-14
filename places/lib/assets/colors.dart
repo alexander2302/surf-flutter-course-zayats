@@ -3,7 +3,7 @@ import 'package:places/ui/screen/res/themes.dart' as themes;
 
 //----
 const Color whiteMain = const Color.fromARGB(255, 37, 40, 73);
-Color whiteSecondary = const Color.fromARGB(255, 59, 62, 91);
+Color whiteSecondary = Color.fromARGB(255, 59, 62, 91);
 const Color whiteSecondary2 = const Color.fromARGB(255, 124, 126, 146);
 Color whiteGreen = Color.fromARGB(255, 76, 175, 80);
 const Color whiteYellow = Color.fromARGB(255, 252, 221, 61);

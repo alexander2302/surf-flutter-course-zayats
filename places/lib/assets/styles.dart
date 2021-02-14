@@ -17,14 +17,15 @@ TextStyle normalS18W500 = const TextStyle(
   fontStyle: FontStyle.normal,
 );
 
-TextStyle normalS16W500 = const TextStyle(
+////////////////////////////////////////////////////////////////////////////////
+/// with color
+TextStyle normalS16W500 = TextStyle(
   fontSize: 16,
+  color: colors.getColorCardTitle(),
   fontWeight: FontWeight.w500,
   fontStyle: FontStyle.normal,
 );
 
-////////////////////////////////////////////////////////////////////////////////
-/// with color
 TextStyle normalS14W400Green = TextStyle(
   fontSize: 14,
   color: colors.getGreen(),

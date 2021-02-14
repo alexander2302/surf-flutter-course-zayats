@@ -3,7 +3,6 @@ import 'package:places/assets/strings.dart' as strings;
 import 'package:places/assets/styles.dart' as styles;
 import 'package:places/ui/screen/visiting/visiting_list_visited.dart';
 import 'package:places/ui/screen/visiting/visiting_list_want.dart';
-import 'package:places/assets/colors.dart' as colors;
 
 //This class is responsible for displaying tabs with tabs
 // - I want to visit

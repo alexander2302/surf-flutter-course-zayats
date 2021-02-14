@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:places/assets/constants_color.dart' as ConstantsColor;
-import 'package:places/assets/constants_image.dart' as ConstantsImage;
+import 'package:places/assets/images.dart' as images;
 import 'package:places/ui/screen/sight_list_screen.dart';
 import 'package:places/ui/screen/visiting_screen.dart';
 
@@ -60,25 +59,25 @@ class _HolderWidgetState extends State<HolderWidget> {
           //list
           BottomNavigationBarItem(
             label: '',
-            icon: _buildIcon(ConstantsImage.menuList, false),
-            activeIcon: _buildIcon(ConstantsImage.menuListFull, true),
+            icon: _buildIcon(images.menuList, false),
+            activeIcon: _buildIcon(images.menuListFull, true),
           ),
           //map
           BottomNavigationBarItem(
             label: '',
-            icon: _buildIcon(ConstantsImage.menuMap, false),
-            activeIcon: _buildIcon(ConstantsImage.menuMapFull, true),
+            icon: _buildIcon(images.menuMap, false),
+            activeIcon: _buildIcon(images.menuMapFull, true),
           ),
           //heart
           BottomNavigationBarItem(
             label: '',
-            icon: _buildIcon(ConstantsImage.menuHeart, false),
-            activeIcon: _buildIcon(ConstantsImage.menuHeartFull, true),
+            icon: _buildIcon(images.menuHeart, false),
+            activeIcon: _buildIcon(images.menuHeartFull, true),
           ),
           BottomNavigationBarItem(
             label: '',
-            icon: _buildIcon(ConstantsImage.menuSettings, false),
-            activeIcon: _buildIcon(ConstantsImage.menuSettingsFull, true),
+            icon: _buildIcon(images.menuSettings, false),
+            activeIcon: _buildIcon(images.menuSettingsFull, true),
           ),
         ],
       ),

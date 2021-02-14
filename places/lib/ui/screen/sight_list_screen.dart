@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:places/mocks.dart';
+import 'package:places/assets/strings.dart' as strings;
 import 'package:places/ui/screen/sight_card.dart';
-import 'package:places/assets/constant_strings.dart' as ConstantsStrings;
 import 'package:places/ui/custom_widgets/app_bar_custom.dart';
 
 //This class for the application screen "List of Interests"
@@ -17,7 +17,7 @@ class _SightListScreenState extends State<SightListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBarCustom(title: ConstantsStrings.appBarTitleL),
+      appBar: AppBarCustom(title: strings.appBarTitleL),
       body: Center(
           child: SingleChildScrollView(
         child: Column(

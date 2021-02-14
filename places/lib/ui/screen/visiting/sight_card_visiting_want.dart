@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:places/domain/sight.dart';
-import 'package:places/assets/constants_color.dart' as ConstantsColor;
-import 'package:places/assets/constants_forms.dart' as ConstantsForms;
-import 'package:places/assets/constants_image.dart' as ConstantsImage;
+import 'package:places/assets/forms.dart' as forms;
+import 'package:places/assets/images.dart' as images;
 import 'package:places/assets/constants_text_style.dart' as ConstantsTextStyle;
 
 //This class helps in visualizing tab for places we want to visit
@@ -19,9 +18,9 @@ class SightCardVisitingWant extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: Theme.of(context).primaryColor,
-        borderRadius: ConstantsForms.radAll16,
+        borderRadius: forms.radAll16,
       ),
-      margin: ConstantsForms.top16,
+      margin: forms.top16,
       child: Column(
         children: [
           _buildCardHeared(sight),
@@ -35,7 +34,7 @@ class SightCardVisitingWant extends StatelessWidget {
 //This Widget contains category name and buttons
 Widget _buildCardHeared(Sight sight) {
   return ClipRRect(
-    borderRadius: ConstantsForms.radTopLett16TopRight16,
+    borderRadius: forms.radTopLett16TopRight16,
     child: Stack(
       children: <Widget>[
         SizedBox(
@@ -62,7 +61,7 @@ Widget _buildCardHeared(Sight sight) {
           width: 328,
           height: 96,
           child: Container(
-            margin: ConstantsForms.left16Top16,
+            margin: forms.left16Top16,
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -79,7 +78,7 @@ Widget _buildCardHeared(Sight sight) {
                       right: 28,
                     ),
                     icon: Image.asset(
-                      ConstantsImage.calendarWhite,
+                      images.calendarWhite,
                       color: Colors.white,
                       width: 24,
                       height: 24,
@@ -93,7 +92,7 @@ Widget _buildCardHeared(Sight sight) {
                       right: 20,
                     ),
                     icon: Image.asset(
-                      ConstantsImage.union,
+                      images.union,
                       color: Colors.white,
                       width: 24,
                       height: 24,
@@ -121,7 +120,7 @@ Widget _buildCardDescription(Sight sight, BuildContext context) {
     child: Container(
       alignment: Alignment.topLeft,
       child: Container(
-        margin: ConstantsForms.all16,
+        margin: forms.all16,
         alignment: Alignment.topLeft,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -140,7 +139,7 @@ Widget _buildCardDescription(Sight sight, BuildContext context) {
                 maxHeight: 28,
               ),
               child: Padding(
-                padding: ConstantsForms.top2,
+                padding: forms.top2,
                 child: Text(
                   //TODO: will be replaced (temporary value)
                   "Запланировано на 12 окт. 2020",

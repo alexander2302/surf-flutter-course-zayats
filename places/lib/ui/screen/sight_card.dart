@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:places/domain/sight.dart';
-import 'package:places/assets/constants_forms.dart' as ConstantsForms;
-import 'package:places/assets/constants_image.dart' as ConstantsImage;
+import 'package:places/assets/forms.dart' as forms;
+import 'package:places/assets/images.dart' as images;
 import 'package:places/assets/constants_text_style.dart' as ConstantsTextStyle;
 
 //This class helps in visualizing a card with a summary of an unknown place
@@ -19,9 +19,9 @@ class SightCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: Theme.of(context).primaryColor,
         //scolor: ConstantsColor.gray,
-        borderRadius: ConstantsForms.radAll16,
+        borderRadius: forms.radAll16,
       ),
-      margin: ConstantsForms.top16,
+      margin: forms.top16,
       child: Column(
         children: [
           _buildCardHeared(sight),
@@ -35,7 +35,7 @@ class SightCard extends StatelessWidget {
 //This Widget contains the category name and the favorite button
 Widget _buildCardHeared(Sight sight) {
   return ClipRRect(
-    borderRadius: ConstantsForms.radTopLett16TopRight16,
+    borderRadius: forms.radTopLett16TopRight16,
     child: Stack(
       children: <Widget>[
         SizedBox(
@@ -62,7 +62,7 @@ Widget _buildCardHeared(Sight sight) {
           width: 328,
           height: 96,
           child: Container(
-            margin: ConstantsForms.left16Top16,
+            margin: forms.left16Top16,
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -75,7 +75,7 @@ Widget _buildCardHeared(Sight sight) {
                 IconButton(
                   padding: const EdgeInsets.only(bottom: 20),
                   icon: Image.asset(
-                    ConstantsImage.heart,
+                    images.heart,
                     width: 20,
                     height: 18,
                   ),
@@ -102,7 +102,7 @@ Widget _buildCardDescription(Sight sight, BuildContext context) {
     child: Container(
       alignment: Alignment.topLeft,
       child: Container(
-        margin: ConstantsForms.all16,
+        margin: forms.all16,
         alignment: Alignment.topLeft,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

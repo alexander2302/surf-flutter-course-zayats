@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:places/assets/constant_strings.dart' as ConstantsStrings;
+import 'package:places/assets/strings.dart' as strings;
 import 'package:places/assets/constants_text_style.dart' as ConstantsTextStyle;
 import 'package:places/ui/screen/visiting/visiting_list_visited.dart';
 import 'package:places/ui/screen/visiting/visiting_list_want.dart';
@@ -43,10 +43,10 @@ class _VisitingScreenState extends State<VisitingScreen> {
                   child: TabBar(
                     tabs: [
                       Tab(
-                        text: ConstantsStrings.tabWantToVisit,
+                        text: strings.tabWantToVisit,
                       ),
                       Tab(
-                        text: ConstantsStrings.tabPlaceVisited,
+                        text: strings.tabPlaceVisited,
                       ),
                     ],
                   ),
@@ -55,7 +55,7 @@ class _VisitingScreenState extends State<VisitingScreen> {
             ),
             title: Center(
               child: Text(
-                ConstantsStrings.tabBarTitle,
+                strings.tabBarTitle,
                 textAlign: TextAlign.center,
                 style: ConstantsTextStyle.whiteMainS18W500.copyWith(
                   color: Theme.of(context).accentColor,

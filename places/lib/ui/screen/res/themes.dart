@@ -1,44 +1,55 @@
 import 'package:flutter/material.dart';
-import 'package:places/assets/constants_color.dart' as ConstantsColor;
+import 'package:places/assets/colors.dart' as colors;
 
-final lightTheme = ThemeData(
+bool _isDark = false;
+void initTheme({bool isDark}) {
+  _isDark = isDark;
+}
+
+bool isDarkTheme() {
+  return _isDark;
+}
+
+ThemeData getThemeData() => _isDark ? _darkTheme : _lightTheme;
+
+var _lightTheme = ThemeData(
   secondaryHeaderColor: Colors.red,
-  accentColor: ConstantsColor.whiteMain,
-  primaryColor: ConstantsColor.ltPrimaryColorGray,
+  accentColor: colors.whiteMain,
+  primaryColor: colors.ltPrimaryColorGray,
   scaffoldBackgroundColor: Colors.white,
   bottomNavigationBarTheme: BottomNavigationBarThemeData(
     backgroundColor: Colors.white,
-    selectedItemColor: ConstantsColor.whiteMain,
-    unselectedItemColor: ConstantsColor.whiteSecondary,
+    selectedItemColor: colors.whiteMain,
+    unselectedItemColor: colors.whiteSecondary,
   ),
   tabBarTheme: TabBarTheme(
     indicator: BoxDecoration(
-      color: ConstantsColor.whiteSecondary,
+      color: colors.whiteSecondary,
       borderRadius: BorderRadius.circular(40),
     ),
-    unselectedLabelColor: ConstantsColor.whiteInactiveBlack,
+    unselectedLabelColor: colors.whiteInactiveBlack,
     labelColor: Colors.white,
   ),
   splashColor: Colors.transparent,
   highlightColor: Colors.transparent,
 );
 
-final darkTheme = ThemeData(
+var _darkTheme = ThemeData(
   secondaryHeaderColor: Colors.orange,
   accentColor: Colors.white,
-  primaryColor: ConstantsColor.dtPrimaryColor,
-  scaffoldBackgroundColor: ConstantsColor.dtBlackMain,
+  primaryColor: colors.dtPrimaryColor,
+  scaffoldBackgroundColor: colors.dtBlackMain,
   bottomNavigationBarTheme: BottomNavigationBarThemeData(
-    backgroundColor: ConstantsColor.dtBlackMain,
+    backgroundColor: colors.dtBlackMain,
     selectedItemColor: Colors.white,
     unselectedItemColor: Colors.white,
   ),
   tabBarTheme: TabBarTheme(
     indicator: BoxDecoration(
-      color: ConstantsColor.whiteSecondary,
+      color: colors.whiteSecondary,
       borderRadius: BorderRadius.circular(40),
     ),
-    unselectedLabelColor: ConstantsColor.whiteInactiveBlack,
+    unselectedLabelColor: colors.whiteInactiveBlack,
     labelColor: Colors.white,
   ),
   splashColor: Colors.transparent,

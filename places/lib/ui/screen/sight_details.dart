@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:places/domain/sight.dart';
-import 'package:places/assets/constant_strings.dart' as ConstantsStrings;
-import 'package:places/assets/constants_color.dart' as ConstantsColor;
-import 'package:places/assets/constants_forms.dart' as ConstantsForms;
-import 'package:places/assets/constants_image.dart' as ConstantsImage;
+import 'package:places/assets/strings.dart' as strings;
+import 'package:places/assets/colors.dart' as colors;
+import 'package:places/assets/forms.dart' as forms;
+import 'package:places/assets/images.dart' as images;
 import 'package:places/assets/constants_text_style.dart' as ConstantsTextStyle;
 
 //The class is responsible for displaying the "open" state of the
@@ -54,7 +54,7 @@ class SightDetails extends StatelessWidget {
                   sight.name,
                   maxLines: 2,
                   style: TextStyle(
-                    color: ConstantsColor.whiteSecondary,
+                    color: colors.whiteSecondary,
                     fontSize: 24,
                     fontWeight: FontWeight.w700,
                   ),
@@ -92,20 +92,20 @@ class SightDetails extends StatelessWidget {
                       borderRadius: BorderRadius.circular(12.0),
                     ),
                     onPressed: () => {},
-                    color: ConstantsColor.green,
+                    color: colors.green,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       //Replace with a Row for horizontal icon + text
                       children: <Widget>[
                         Image.asset(
-                          ConstantsImage.route,
+                          images.route,
                           width: 20,
                           height: 18,
                         ),
                         Container(
-                          margin: ConstantsForms.left8,
+                          margin: forms.left8,
                           child: Text(
-                            ConstantsStrings.buildRoute,
+                            strings.buildRoute,
                             style: ConstantsTextStyle.whiteS14W700,
                           ),
                         ),
@@ -135,7 +135,7 @@ class SightDetails extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Image.asset(
-                          ConstantsImage.calendar,
+                          images.calendar,
                           width: 20,
                           height: 18,
                         ),
@@ -144,9 +144,9 @@ class SightDetails extends StatelessWidget {
                             left: 8,
                           ),
                           child: Text(
-                            ConstantsStrings.schedule,
+                            strings.schedule,
                             style: TextStyle(
-                              color: ConstantsColor.whiteInactiveBlack,
+                              color: colors.whiteInactiveBlack,
                               fontSize: 14,
                               fontWeight: FontWeight.w400,
                             ),
@@ -162,7 +162,7 @@ class SightDetails extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Image.asset(
-                          ConstantsImage.heart2,
+                          images.heart2,
                           width: 20,
                           height: 18,
                         ),
@@ -171,7 +171,7 @@ class SightDetails extends StatelessWidget {
                             left: 8,
                           ),
                           child: Text(
-                            ConstantsStrings.favorites,
+                            strings.favorites,
                             style: ConstantsTextStyle.whiteSecondaryS14W400,
                           ),
                         ),

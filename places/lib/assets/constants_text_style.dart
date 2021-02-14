@@ -1,10 +1,10 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
-import 'package:places/assets/constants_color.dart' as ConstantsColor;
+import 'package:places/assets/colors.dart' as colors;
 
 const TextStyle blackS32W700 = TextStyle(
-  color: ConstantsColor.whiteSecondary,
+  color: colors.whiteSecondary,
   fontSize: 32,
   fontWeight: FontWeight.w700,
   fontFamily: 'RobotoBlack',
@@ -20,49 +20,49 @@ TextStyle whiteS14W700 = const TextStyle(
 
 TextStyle whiteSecondaryS16W500 = const TextStyle(
   fontSize: 16,
-  color: ConstantsColor.whiteSecondary,
+  color: colors.whiteSecondary,
   fontWeight: FontWeight.w500,
   fontStyle: FontStyle.normal,
 );
 
 TextStyle whiteSecondaryS14W700 = const TextStyle(
   fontSize: 14,
-  color: ConstantsColor.whiteSecondary,
+  color: colors.whiteSecondary,
   fontWeight: FontWeight.w700,
   fontStyle: FontStyle.normal,
 );
 
 TextStyle whiteSecondary2S14W400 = const TextStyle(
   fontSize: 14,
-  color: ConstantsColor.whiteSecondary2,
+  color: colors.whiteSecondary2,
   fontWeight: FontWeight.w400,
   fontStyle: FontStyle.normal,
 );
 
 TextStyle greenS14W400 = const TextStyle(
   fontSize: 14,
-  color: ConstantsColor.green,
+  color: colors.green,
   fontWeight: FontWeight.w400,
   fontStyle: FontStyle.normal,
 );
 
 TextStyle whiteSecondaryS14W400 = const TextStyle(
   fontSize: 14,
-  color: ConstantsColor.whiteSecondary,
+  color: colors.whiteSecondary,
   fontWeight: FontWeight.w400,
   fontStyle: FontStyle.normal,
 );
 
 TextStyle whiteSecondary2S14W700 = const TextStyle(
   fontSize: 14,
-  color: ConstantsColor.whiteSecondary2,
+  color: colors.whiteSecondary2,
   fontWeight: FontWeight.w700,
   fontStyle: FontStyle.normal,
 );
 
 TextStyle whiteMainS18W500 = const TextStyle(
   fontSize: 18,
-  color: ConstantsColor.whiteMain,
+  color: colors.whiteMain,
   fontWeight: FontWeight.w500,
   fontStyle: FontStyle.normal,
 );

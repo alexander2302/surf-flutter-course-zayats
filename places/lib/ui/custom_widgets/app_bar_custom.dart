@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:places/assets/constants_forms.dart' as ConstantsForms;
+import 'package:places/assets/forms.dart' as forms;
 import 'package:places/assets/constants_text_style.dart' as ConstantsTextStyle;
 
 /*
@@ -18,7 +18,7 @@ class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
     return SizedBox(
       height: preferredSize.height,
       child: Padding(
-        padding: ConstantsForms.left16Top64Right16,
+        padding: forms.left16Top64Right16,
         child: Text(
           title,
           overflow: TextOverflow.ellipsis,

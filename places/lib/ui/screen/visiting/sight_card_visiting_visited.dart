@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:places/domain/sight.dart';
-import 'package:places/assets/constants_forms.dart' as ConstantsForms;
-import 'package:places/assets/constants_image.dart' as ConstantsImage;
+import 'package:places/assets/forms.dart' as forms;
 import 'package:places/assets/constants_text_style.dart' as ConstantsTextStyle;
 
 //This class helps in visualizing a tab  withs visited places
@@ -18,9 +17,9 @@ class SightCardVisitingVisited extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: Theme.of(context).primaryColor,
-        borderRadius: ConstantsForms.radAll16,
+        borderRadius: forms.radAll16,
       ),
-      margin: ConstantsForms.top16,
+      margin: forms.top16,
       child: Column(
         children: [
           _buildCardHeared(sight),
@@ -34,7 +33,7 @@ class SightCardVisitingVisited extends StatelessWidget {
 //This Widget contains category name and buttons
 Widget _buildCardHeared(Sight sight) {
   return ClipRRect(
-    borderRadius: ConstantsForms.radTopLett16TopRight16,
+    borderRadius: forms.radTopLett16TopRight16,
     child: Stack(
       children: <Widget>[
         SizedBox(
@@ -120,7 +119,7 @@ Widget _buildCardDescription(Sight sight, BuildContext context) {
     child: Container(
       alignment: Alignment.topLeft,
       child: Container(
-        margin: ConstantsForms.all16,
+        margin: forms.all16,
         alignment: Alignment.topLeft,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -139,7 +138,7 @@ Widget _buildCardDescription(Sight sight, BuildContext context) {
                 maxHeight: 28,
               ),
               child: Padding(
-                padding: ConstantsForms.top2,
+                padding: forms.top2,
                 child: Text(
                   //TODO: will be replaced (temporary value)
                   "Цель достигнута 12 окт. 2020", //

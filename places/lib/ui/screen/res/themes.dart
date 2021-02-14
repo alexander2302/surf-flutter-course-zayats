@@ -14,7 +14,6 @@ ThemeData getThemeData() => _isDark ? _darkTheme : _lightTheme;
 
 var _lightTheme = ThemeData(
   accentColor: colors.whiteSecondary,
-  primaryColor: colors.blackWhite,
   unselectedWidgetColor: colors.whiteBackground,
   scaffoldBackgroundColor: Colors.white,
   bottomNavigationBarTheme: BottomNavigationBarThemeData(
@@ -27,23 +26,17 @@ var _lightTheme = ThemeData(
       color: colors.whiteSecondary,
       borderRadius: BorderRadius.circular(40),
     ),
-    unselectedLabelColor: colors.getInactiveBlack(),
+    unselectedLabelColor: colors.whiteInactiveBlack,
     labelColor: Colors.white,
   ),
   splashColor: Colors.transparent,
   highlightColor: Colors.transparent,
+  errorColor: colors.whiteRed,
 );
 
 var _darkTheme = ThemeData(
   accentColor: colors.blackWhite,
   unselectedWidgetColor: colors.blackDark,
-  // appBarTheme: AppBarTheme(
-  //   color: Colors.red,
-  // ),
-
-  // secondaryHeaderColor: Colors.orange,
-  // accentColor: Colors.white,
-
   scaffoldBackgroundColor: colors.blackMain,
   bottomNavigationBarTheme: BottomNavigationBarThemeData(
     backgroundColor: colors.blackMain,
@@ -60,4 +53,5 @@ var _darkTheme = ThemeData(
   ),
   splashColor: Colors.transparent,
   highlightColor: Colors.transparent,
+  errorColor: colors.blackRed,
 );

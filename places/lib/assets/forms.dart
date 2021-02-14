@@ -18,12 +18,38 @@ const EdgeInsets left16Top16 = const EdgeInsets.only(
   top: 16,
 );
 
+const EdgeInsets left16Top2Right16 = const EdgeInsets.only(
+  left: 16,
+  top: 2,
+  right: 16,
+);
+
 const EdgeInsets all16 = const EdgeInsets.all(16);
 
 const EdgeInsets left16Top64Right16 = const EdgeInsets.only(
   left: 16,
   top: 64,
   right: 16,
+);
+
+const EdgeInsets left16Top24Right16 = const EdgeInsets.only(
+  left: 16,
+  top: 24,
+  right: 16,
+);
+
+const EdgeInsets left16Top24Right16Bot24 = const EdgeInsets.only(
+  left: 16,
+  top: 24,
+  right: 16,
+  bottom: 24,
+);
+
+const EdgeInsets left16Top24Right16Bot8 = const EdgeInsets.only(
+  left: 16,
+  top: 24,
+  right: 16,
+  bottom: 8,
 );
 
 BorderRadius standardWidgetTopCircleBorder = BorderRadius.only(

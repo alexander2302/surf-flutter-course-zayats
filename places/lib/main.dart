@@ -22,9 +22,9 @@ class App extends StatelessWidget {
     return MaterialApp(
       theme: themes.getThemeData(),
       title: strings.appTitle,
-      // home: SightDetails(sight: mocks[3]),
+      home: SightDetails(sight: mocks[3]),
       // home: SightListScreen(),
-      home: HolderWidget(),
+      // home: HolderWidget(),
     );
   }
 }

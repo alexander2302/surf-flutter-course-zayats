@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:places/domain/sight.dart';
-import 'package:places/assets/colors.dart' as colors;
 import 'package:places/assets/forms.dart' as forms;
 import 'package:places/assets/images.dart' as images;
 import 'package:places/assets/strings.dart' as strings;
@@ -31,24 +30,24 @@ class SightDetails extends StatelessWidget {
                 child: Text(
                   sight.name,
                   maxLines: 2,
-                  style: styles.normalS24W700CardTitle,
+                  style: Theme.of(context).textTheme.headline1,
                 ),
               ),
               Container(
                 margin: forms.left16Top2Right16,
                 child: Text(
                   sight.getTypeName(),
-                  style: styles.normalS14W700whiteSecondary,
+                  style: Theme.of(context).textTheme.headline3,
                 ),
               ),
               Container(
                 margin: forms.left16Top24Right16Bot24,
                 child: Text(
                   sight.details,
-                  style: styles.normalS14W400whiteSecondary,
+                  style: Theme.of(context).textTheme.headline2,
                 ),
               ),
-              _buildRouteBtn(),
+              _buildRouteBtn(context),
               Container(
                 margin: forms.left16Top24Right16Bot8,
                 child: Divider(
@@ -85,7 +84,7 @@ class SightDetails extends StatelessWidget {
     );
   }
 
-  Widget _buildRouteBtn() {
+  Widget _buildRouteBtn(BuildContext context) {
     return Center(
       child: Container(
         width: 328.0,
@@ -95,7 +94,7 @@ class SightDetails extends StatelessWidget {
             borderRadius: BorderRadius.circular(12.0),
           ),
           onPressed: () => {},
-          color: colors.getGreen(),
+          color: Theme.of(context).hintColor,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             //Replace with a Row for horizontal icon + text
@@ -139,7 +138,7 @@ class SightDetails extends StatelessWidget {
                 margin: forms.left8,
                 child: Text(
                   strings.schedule,
-                  style: styles.normalS14W400whiteSecondary,
+                  style: Theme.of(context).textTheme.headline2,
                 ),
               ),
             ],
@@ -161,7 +160,7 @@ class SightDetails extends StatelessWidget {
                 margin: forms.left8,
                 child: Text(
                   strings.favorites,
-                  style: styles.normalS14W400whiteSecondary,
+                  style: Theme.of(context).textTheme.headline2,
                 ),
               ),
             ],

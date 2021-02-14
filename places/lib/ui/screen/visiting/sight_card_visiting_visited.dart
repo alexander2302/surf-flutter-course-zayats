@@ -3,7 +3,6 @@ import 'package:places/domain/sight.dart';
 import 'package:places/assets/forms.dart' as forms;
 import 'package:places/assets/images.dart' as images;
 import 'package:places/assets/styles.dart' as styles;
-import 'package:places/assets/colors.dart' as colors;
 
 //This class helps in visualizing a tab  withs visited places
 class SightCardVisitingVisited extends StatelessWidget {
@@ -130,9 +129,7 @@ Widget _buildCardDescription(Sight sight, BuildContext context) {
             Text(
               sight.name,
               maxLines: 2,
-              style: styles.normalS16W500.copyWith(
-                color: colors.getColorCardTitle(),
-              ),
+              style: Theme.of(context).textTheme.headline5,
             ),
             ConstrainedBox(
               constraints: BoxConstraints(
@@ -146,7 +143,7 @@ Widget _buildCardDescription(Sight sight, BuildContext context) {
                   "Цель достигнута 12 окт. 2020", //
                   overflow: TextOverflow.ellipsis,
                   maxLines: 2,
-                  style: styles.normalS14W400Green,
+                  style: Theme.of(context).textTheme.headline4,
                 ),
               ),
             ),

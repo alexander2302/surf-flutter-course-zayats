@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:places/domain/sight.dart';
-import 'package:places/assets/colors.dart' as colors;
 import 'package:places/assets/forms.dart' as forms;
 import 'package:places/assets/images.dart' as images;
 import 'package:places/assets/styles.dart' as styles;
@@ -111,9 +110,7 @@ Widget _buildCardDescription(Sight sight, BuildContext context) {
             Text(
               sight.name,
               maxLines: 2,
-              style: styles.normalS16W500.copyWith(
-                color: colors.getColorCardTitle(),
-              ),
+              style: Theme.of(context).textTheme.headline5,
             ),
             Text(
               sight.details,

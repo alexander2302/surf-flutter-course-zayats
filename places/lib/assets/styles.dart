@@ -19,20 +19,6 @@ TextStyle normalS18W500 = const TextStyle(
 
 ////////////////////////////////////////////////////////////////////////////////
 /// with color
-TextStyle normalS16W500 = TextStyle(
-  fontSize: 16,
-  color: colors.getColorCardTitle(),
-  fontWeight: FontWeight.w500,
-  fontStyle: FontStyle.normal,
-);
-
-TextStyle normalS14W400Green = TextStyle(
-  fontSize: 14,
-  color: colors.getGreen(),
-  fontWeight: FontWeight.w400,
-  fontStyle: FontStyle.normal,
-);
-
 TextStyle normalS14W400Secondary2 = const TextStyle(
   fontSize: 14,
   color: colors.whiteSecondary2,
@@ -43,27 +29,6 @@ TextStyle normalS14W400Secondary2 = const TextStyle(
 TextStyle normalS14W700white = const TextStyle(
   fontSize: 14,
   color: Colors.white,
-  fontWeight: FontWeight.w700,
-  fontStyle: FontStyle.normal,
-);
-
-TextStyle normalS14W400whiteSecondary = TextStyle(
-  fontSize: 14,
-  color: colors.getColorCardTitle(),
-  fontWeight: FontWeight.w400,
-  fontStyle: FontStyle.normal,
-);
-
-TextStyle normalS24W700CardTitle = TextStyle(
-  fontSize: 24,
-  color: colors.getColorCardTitle(),
-  fontWeight: FontWeight.w700,
-  fontStyle: FontStyle.normal,
-);
-
-TextStyle normalS14W700whiteSecondary = TextStyle(
-  fontSize: 14,
-  color: colors.getColorCardType(),
   fontWeight: FontWeight.w700,
   fontStyle: FontStyle.normal,
 );

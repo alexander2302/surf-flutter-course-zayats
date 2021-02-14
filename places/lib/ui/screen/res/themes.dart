@@ -1,18 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:places/assets/colors.dart' as colors;
 
-bool _isDark = false;
-void initTheme({bool isDark}) {
-  _isDark = isDark;
-}
-
-bool isDarkTheme() {
-  return _isDark;
-}
-
-ThemeData getThemeData() => _isDark ? _darkTheme : _lightTheme;
-
-var _lightTheme = ThemeData(
+var lightTheme = ThemeData(
   accentColor: colors.whiteSecondary,
   unselectedWidgetColor: colors.whiteBackground,
   scaffoldBackgroundColor: Colors.white,
@@ -32,9 +21,47 @@ var _lightTheme = ThemeData(
   splashColor: Colors.transparent,
   highlightColor: Colors.transparent,
   errorColor: colors.whiteRed,
+  hintColor: colors.whiteGreen,
+  textTheme: TextTheme(
+    headline1: TextStyle(
+      fontSize: 24,
+      color: colors.whiteSecondary,
+      fontWeight: FontWeight.w700,
+      fontStyle: FontStyle.normal,
+    ),
+    headline2: TextStyle(
+      fontSize: 14,
+      color: colors.whiteSecondary,
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.normal,
+    ),
+    headline3: TextStyle(
+      fontSize: 14,
+      color: colors.whiteSecondary,
+      fontWeight: FontWeight.w700,
+      fontStyle: FontStyle.normal,
+    ),
+    headline4: TextStyle(
+      fontSize: 14,
+      color: colors.whiteGreen,
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.normal,
+    ),
+    headline5: TextStyle(
+      fontSize: 16,
+      color: colors.whiteSecondary,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+    ),
+    // headline6: TextStyle(),
+    // bodyText1: TextStyle(),
+    // bodyText2: TextStyle(),
+    // subtitle1: TextStyle(),
+    // subtitle2: TextStyle(),
+  ),
 );
 
-var _darkTheme = ThemeData(
+var darkTheme = ThemeData(
   accentColor: colors.blackWhite,
   unselectedWidgetColor: colors.blackDark,
   scaffoldBackgroundColor: colors.blackMain,
@@ -54,4 +81,42 @@ var _darkTheme = ThemeData(
   splashColor: Colors.transparent,
   highlightColor: Colors.transparent,
   errorColor: colors.blackRed,
+  hintColor: colors.blackGreen,
+  textTheme: TextTheme(
+    headline1: TextStyle(
+      fontSize: 24,
+      color: colors.blackWhite,
+      fontWeight: FontWeight.w700,
+      fontStyle: FontStyle.normal,
+    ),
+    headline2: TextStyle(
+      fontSize: 14,
+      color: colors.blackWhite,
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.normal,
+    ),
+    headline3: TextStyle(
+      fontSize: 14,
+      color: colors.blackSecondary2,
+      fontWeight: FontWeight.w700,
+      fontStyle: FontStyle.normal,
+    ),
+    headline4: TextStyle(
+      fontSize: 14,
+      color: colors.blackGreen,
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.normal,
+    ),
+    headline5: TextStyle(
+      fontSize: 16,
+      color: colors.blackWhite,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+    ),
+    // headline6: TextStyle(),
+    // bodyText1: TextStyle(),
+    // bodyText2: TextStyle(),
+    // subtitle1: TextStyle(),
+    // subtitle2: TextStyle(),
+  ),
 );

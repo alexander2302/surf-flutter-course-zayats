@@ -13,9 +13,9 @@ bool isDarkTheme() {
 ThemeData getThemeData() => _isDark ? _darkTheme : _lightTheme;
 
 var _lightTheme = ThemeData(
-  secondaryHeaderColor: Colors.red,
-  accentColor: colors.whiteMain,
-  primaryColor: colors.ltPrimaryColorGray,
+  accentColor: colors.whiteSecondary,
+  primaryColor: colors.blackWhite,
+  unselectedWidgetColor: colors.whiteBackground,
   scaffoldBackgroundColor: Colors.white,
   bottomNavigationBarTheme: BottomNavigationBarThemeData(
     backgroundColor: Colors.white,
@@ -27,7 +27,7 @@ var _lightTheme = ThemeData(
       color: colors.whiteSecondary,
       borderRadius: BorderRadius.circular(40),
     ),
-    unselectedLabelColor: colors.whiteInactiveBlack,
+    unselectedLabelColor: colors.getInactiveBlack(),
     labelColor: Colors.white,
   ),
   splashColor: Colors.transparent,
@@ -35,22 +35,28 @@ var _lightTheme = ThemeData(
 );
 
 var _darkTheme = ThemeData(
-  secondaryHeaderColor: Colors.orange,
-  accentColor: Colors.white,
-  primaryColor: colors.dtPrimaryColor,
-  scaffoldBackgroundColor: colors.dtBlackMain,
+  accentColor: colors.blackWhite,
+  unselectedWidgetColor: colors.blackDark,
+  // appBarTheme: AppBarTheme(
+  //   color: Colors.red,
+  // ),
+
+  // secondaryHeaderColor: Colors.orange,
+  // accentColor: Colors.white,
+
+  scaffoldBackgroundColor: colors.blackMain,
   bottomNavigationBarTheme: BottomNavigationBarThemeData(
-    backgroundColor: colors.dtBlackMain,
-    selectedItemColor: Colors.white,
-    unselectedItemColor: Colors.white,
+    backgroundColor: colors.blackMain,
+    selectedItemColor: colors.blackWhite,
+    unselectedItemColor: colors.blackWhite,
   ),
   tabBarTheme: TabBarTheme(
     indicator: BoxDecoration(
-      color: colors.whiteSecondary,
+      color: colors.blackWhite,
       borderRadius: BorderRadius.circular(40),
     ),
     unselectedLabelColor: colors.whiteInactiveBlack,
-    labelColor: Colors.white,
+    labelColor: colors.blackSecondary,
   ),
   splashColor: Colors.transparent,
   highlightColor: Colors.transparent,

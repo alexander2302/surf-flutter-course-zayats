@@ -4,7 +4,7 @@ import 'package:places/assets/strings.dart' as strings;
 import 'package:places/assets/colors.dart' as colors;
 import 'package:places/assets/forms.dart' as forms;
 import 'package:places/assets/images.dart' as images;
-import 'package:places/assets/constants_text_style.dart' as ConstantsTextStyle;
+import 'package:places/assets/styles.dart' as styles;
 
 //The class is responsible for displaying the "open" state of the
 //attraction with action buttons
@@ -68,7 +68,7 @@ class SightDetails extends StatelessWidget {
                 ),
                 child: Text(
                   sight.getTypeName(),
-                  style: ConstantsTextStyle.whiteSecondaryS14W700,
+                  style: styles.normalS14W700whiteSecondary,
                 ),
               ),
               Container(
@@ -80,7 +80,7 @@ class SightDetails extends StatelessWidget {
                 ),
                 child: Text(
                   sight.details,
-                  style: ConstantsTextStyle.whiteSecondaryS14W400,
+                  style: styles.normalS14W400whiteSecondary,
                 ),
               ),
               Center(
@@ -92,7 +92,7 @@ class SightDetails extends StatelessWidget {
                       borderRadius: BorderRadius.circular(12.0),
                     ),
                     onPressed: () => {},
-                    color: colors.green,
+                    color: colors.getGreen(),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       //Replace with a Row for horizontal icon + text
@@ -106,7 +106,7 @@ class SightDetails extends StatelessWidget {
                           margin: forms.left8,
                           child: Text(
                             strings.buildRoute,
-                            style: ConstantsTextStyle.whiteS14W700,
+                            style: styles.normalS14W700white,
                           ),
                         ),
                       ],
@@ -172,7 +172,7 @@ class SightDetails extends StatelessWidget {
                           ),
                           child: Text(
                             strings.favorites,
-                            style: ConstantsTextStyle.whiteSecondaryS14W400,
+                            style: styles.normalS14W400whiteSecondary,
                           ),
                         ),
                       ],

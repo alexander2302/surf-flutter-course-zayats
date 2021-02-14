@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:places/domain/sight.dart';
 import 'package:places/assets/forms.dart' as forms;
-import 'package:places/assets/constants_text_style.dart' as ConstantsTextStyle;
+import 'package:places/assets/images.dart' as images;
+import 'package:places/assets/styles.dart' as styles;
+import 'package:places/assets/colors.dart' as colors;
 
 //This class helps in visualizing a tab  withs visited places
 class SightCardVisitingVisited extends StatelessWidget {
@@ -16,7 +18,7 @@ class SightCardVisitingVisited extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Theme.of(context).primaryColor,
+        color: Theme.of(context).unselectedWidgetColor,
         borderRadius: forms.radAll16,
       ),
       margin: forms.top16,
@@ -60,7 +62,7 @@ Widget _buildCardHeared(Sight sight) {
           width: 328,
           height: 96,
           child: Container(
-            margin: ConstantsForms.left16Top16,
+            margin: forms.left16Top16,
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -68,7 +70,7 @@ Widget _buildCardHeared(Sight sight) {
                 Text(
                   sight.getTypeName(),
                   maxLines: 1,
-                  style: ConstantsTextStyle.whiteS14W700,
+                  style: styles.normalS14W700white,
                 ),
                 Stack(children: <Widget>[
                   IconButton(
@@ -77,7 +79,7 @@ Widget _buildCardHeared(Sight sight) {
                       right: 28,
                     ),
                     icon: Image.asset(
-                      ConstantsImage.share,
+                      images.share,
                       color: Colors.white,
                       width: 24,
                       height: 24,
@@ -91,7 +93,7 @@ Widget _buildCardHeared(Sight sight) {
                       right: 20,
                     ),
                     icon: Image.asset(
-                      ConstantsImage.union,
+                      images.union,
                       color: Colors.white,
                       width: 24,
                       height: 24,
@@ -128,8 +130,8 @@ Widget _buildCardDescription(Sight sight, BuildContext context) {
             Text(
               sight.name,
               maxLines: 2,
-              style: ConstantsTextStyle.whiteSecondaryS16W500.copyWith(
-                color: Theme.of(context).accentColor,
+              style: styles.normalS16W500.copyWith(
+                color: colors.getColorCardTitle(),
               ),
             ),
             ConstrainedBox(
@@ -144,7 +146,7 @@ Widget _buildCardDescription(Sight sight, BuildContext context) {
                   "Цель достигнута 12 окт. 2020", //
                   overflow: TextOverflow.ellipsis,
                   maxLines: 2,
-                  style: ConstantsTextStyle.whiteSecondary2S14W400,
+                  style: styles.normalS14W400Green,
                 ),
               ),
             ),
@@ -153,7 +155,7 @@ Widget _buildCardDescription(Sight sight, BuildContext context) {
               "закрыто до 09:00",
               overflow: TextOverflow.ellipsis,
               maxLines: 2,
-              style: ConstantsTextStyle.whiteSecondary2S14W400,
+              style: styles.normalS14W400Secondary2,
             )
           ],
         ),

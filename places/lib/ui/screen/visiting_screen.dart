@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:places/assets/strings.dart' as strings;
-import 'package:places/assets/constants_text_style.dart' as ConstantsTextStyle;
+import 'package:places/assets/styles.dart' as styles;
 import 'package:places/ui/screen/visiting/visiting_list_visited.dart';
 import 'package:places/ui/screen/visiting/visiting_list_want.dart';
+import 'package:places/assets/colors.dart' as colors;
 
 //This class is responsible for displaying tabs with tabs
 // - I want to visit
@@ -35,7 +36,7 @@ class _VisitingScreenState extends State<VisitingScreen> {
                 ),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Theme.of(context).primaryColor,
+                    color: Theme.of(context).unselectedWidgetColor,
                     borderRadius: BorderRadius.all(Radius.circular(40)),
                   ),
                   width: 338,
@@ -57,7 +58,7 @@ class _VisitingScreenState extends State<VisitingScreen> {
               child: Text(
                 strings.tabBarTitle,
                 textAlign: TextAlign.center,
-                style: ConstantsTextStyle.whiteMainS18W500.copyWith(
+                style: styles.normalS18W500.copyWith(
                   color: Theme.of(context).accentColor,
                 ),
               ),

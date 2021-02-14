@@ -16,7 +16,8 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //
-    themes.initTheme(isDark: false);
+    themes.initTheme(isDark: true);
+    // themes.initTheme(isDark: false);
 
     return MaterialApp(
       theme: themes.getThemeData(),

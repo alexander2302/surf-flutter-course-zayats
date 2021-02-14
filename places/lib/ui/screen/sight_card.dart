@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:places/domain/sight.dart';
+import 'package:places/assets/colors.dart' as colors;
 import 'package:places/assets/forms.dart' as forms;
 import 'package:places/assets/images.dart' as images;
-import 'package:places/assets/constants_text_style.dart' as ConstantsTextStyle;
+import 'package:places/assets/styles.dart' as styles;
 
 //This class helps in visualizing a card with a summary of an unknown place
 class SightCard extends StatelessWidget {
@@ -17,8 +18,7 @@ class SightCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Theme.of(context).primaryColor,
-        //scolor: ConstantsColor.gray,
+        color: Theme.of(context).unselectedWidgetColor,
         borderRadius: forms.radAll16,
       ),
       margin: forms.top16,
@@ -70,7 +70,7 @@ Widget _buildCardHeared(Sight sight) {
                 Text(
                   sight.getTypeName(),
                   maxLines: 1,
-                  style: ConstantsTextStyle.whiteS14W700,
+                  style: styles.normalS14W700white,
                 ),
                 IconButton(
                   padding: const EdgeInsets.only(bottom: 20),
@@ -111,15 +111,15 @@ Widget _buildCardDescription(Sight sight, BuildContext context) {
             Text(
               sight.name,
               maxLines: 2,
-              style: ConstantsTextStyle.whiteSecondaryS16W500.copyWith(
-                color: Theme.of(context).accentColor,
+              style: styles.normalS16W500.copyWith(
+                color: colors.getColorCardTitle(),
               ),
             ),
             Text(
               sight.details,
               overflow: TextOverflow.ellipsis,
               maxLines: 2,
-              style: ConstantsTextStyle.whiteSecondary2S14W400,
+              style: styles.normalS14W400Secondary2,
             ),
           ],
         ),

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:places/domain/sight.dart';
-import 'package:places/assets/constants_color.dart' as ConstantsColor;
-import 'package:places/assets/constants_forms.dart' as ConstantsForms;
-import 'package:places/assets/constants_image.dart' as ConstantsImage;
-import 'package:places/assets/constants_text_style.dart' as ConstantsTextStyle;
+import 'package:places/assets/forms.dart' as forms;
+import 'package:places/assets/images.dart' as images;
+import 'package:places/assets/styles.dart' as styles;
 
 //This class helps in visualizing tab for places we want to visit
 class SightCardVisitingWant extends StatelessWidget {
@@ -18,14 +17,14 @@ class SightCardVisitingWant extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: ConstantsColor.gray,
-        borderRadius: ConstantsForms.radAll16,
+        color: Theme.of(context).unselectedWidgetColor,
+        borderRadius: forms.radAll16,
       ),
-      margin: ConstantsForms.top16,
+      margin: forms.top16,
       child: Column(
         children: [
           _buildCardHeared(sight),
-          _buildCardDescription(sight),
+          _buildCardDescription(sight, context),
         ],
       ),
     );
@@ -35,7 +34,7 @@ class SightCardVisitingWant extends StatelessWidget {
 //This Widget contains category name and buttons
 Widget _buildCardHeared(Sight sight) {
   return ClipRRect(
-    borderRadius: ConstantsForms.radTopLett16TopRight16,
+    borderRadius: forms.radTopLett16TopRight16,
     child: Stack(
       children: <Widget>[
         SizedBox(
@@ -62,7 +61,7 @@ Widget _buildCardHeared(Sight sight) {
           width: 328,
           height: 96,
           child: Container(
-            margin: ConstantsForms.left16Top16,
+            margin: forms.left16Top16,
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -70,7 +69,7 @@ Widget _buildCardHeared(Sight sight) {
                 Text(
                   sight.getTypeName(),
                   maxLines: 1,
-                  style: ConstantsTextStyle.whiteS14W700,
+                  style: styles.normalS14W700white,
                 ),
                 Stack(children: <Widget>[
                   IconButton(
@@ -79,7 +78,7 @@ Widget _buildCardHeared(Sight sight) {
                       right: 28,
                     ),
                     icon: Image.asset(
-                      ConstantsImage.calendarWhite,
+                      images.calendarWhite,
                       color: Colors.white,
                       width: 24,
                       height: 24,
@@ -93,7 +92,7 @@ Widget _buildCardHeared(Sight sight) {
                       right: 20,
                     ),
                     icon: Image.asset(
-                      ConstantsImage.union,
+                      images.union,
                       color: Colors.white,
                       width: 24,
                       height: 24,
@@ -111,7 +110,7 @@ Widget _buildCardHeared(Sight sight) {
 }
 
 //This ConstrainedBox contains a short description
-Widget _buildCardDescription(Sight sight) {
+Widget _buildCardDescription(Sight sight, BuildContext context) {
   return ConstrainedBox(
     constraints: BoxConstraints(
       minWidth: 328,
@@ -121,7 +120,7 @@ Widget _buildCardDescription(Sight sight) {
     child: Container(
       alignment: Alignment.topLeft,
       child: Container(
-        margin: ConstantsForms.all16,
+        margin: forms.all16,
         alignment: Alignment.topLeft,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -130,7 +129,7 @@ Widget _buildCardDescription(Sight sight) {
             Text(
               sight.name,
               maxLines: 2,
-              style: ConstantsTextStyle.whiteSecondaryS16W500,
+              style: Theme.of(context).textTheme.headline5,
             ),
             ConstrainedBox(
               constraints: BoxConstraints(
@@ -138,20 +137,22 @@ Widget _buildCardDescription(Sight sight) {
                 maxHeight: 28,
               ),
               child: Padding(
-                padding: ConstantsForms.top2,
+                padding: forms.top2,
                 child: Text(
+                  //TODO: will be replaced (temporary value)
                   "Запланировано на 12 окт. 2020",
                   overflow: TextOverflow.ellipsis,
                   maxLines: 2,
-                  style: ConstantsTextStyle.greenS14W400,
+                  style: Theme.of(context).textTheme.headline4,
                 ),
               ),
             ),
             Text(
+              //TODO: will be replaced (temporary value)
               "закрыто до 09:00",
               overflow: TextOverflow.ellipsis,
               maxLines: 2,
-              style: ConstantsTextStyle.whiteSecondary2S14W400,
+              style: styles.normalS14W400Secondary2,
             )
           ],
         ),

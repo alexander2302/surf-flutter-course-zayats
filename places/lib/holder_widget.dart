@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:places/assets/constants_color.dart' as ConstantsColor;
+import 'package:places/assets/images.dart' as images;
+import 'package:places/ui/screen/sight_list_screen.dart';
 import 'package:places/ui/screen/visiting_screen.dart';
 
 /// This is the stateful widget that the main application instantiates.
@@ -18,14 +19,11 @@ class _HolderWidgetState extends State<HolderWidget> {
     fontWeight: FontWeight.bold,
   );
 
+  static const Widget _sightListScreen = SightListScreen();
   static const Widget _visitingScreen = VisitingScreen();
 
   static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'List\nwill be here\n(temp value, index 0)',
-      style: optionStyle,
-      textAlign: TextAlign.center,
-    ),
+    _sightListScreen,
     Text(
       'Map\nwill be here\n(temp value, index 1)',
       style: optionStyle,
@@ -55,34 +53,46 @@ class _HolderWidgetState extends State<HolderWidget> {
         showSelectedLabels: false,
         showUnselectedLabels: false,
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.white,
-        selectedItemColor: ConstantsColor.whiteMain,
-        unselectedItemColor: ConstantsColor.whiteSecondary,
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
         items: [
+          //list
           BottomNavigationBarItem(
             label: '',
-            icon: Icon(Icons.list_alt),
-            activeIcon: Icon(Icons.list_alt_outlined),
+            icon: _buildIcon(images.menuList, false),
+            activeIcon: _buildIcon(images.menuListFull, true),
+          ),
+          //map
+          BottomNavigationBarItem(
+            label: '',
+            icon: _buildIcon(images.menuMap, false),
+            activeIcon: _buildIcon(images.menuMapFull, true),
+          ),
+          //heart
+          BottomNavigationBarItem(
+            label: '',
+            icon: _buildIcon(images.menuHeart, false),
+            activeIcon: _buildIcon(images.menuHeartFull, true),
           ),
           BottomNavigationBarItem(
             label: '',
-            icon: Icon(Icons.map_outlined),
-            activeIcon: Icon(Icons.map),
-          ),
-          BottomNavigationBarItem(
-            label: '',
-            icon: Icon(Icons.favorite_outline_outlined),
-            activeIcon: Icon(Icons.favorite),
-          ),
-          BottomNavigationBarItem(
-            label: '',
-            icon: Icon(Icons.settings_outlined),
-            activeIcon: Icon(Icons.settings),
+            icon: _buildIcon(images.menuSettings, false),
+            activeIcon: _buildIcon(images.menuSettingsFull, true),
           ),
         ],
       ),
+    );
+  }
+
+  //Loading image from resources and creating image
+  Widget _buildIcon(String name, bool isActive) {
+    return Image.asset(
+      name,
+      width: 24,
+      height: 24,
+      color: isActive
+          ? Theme.of(context).bottomNavigationBarTheme.selectedItemColor
+          : Theme.of(context).bottomNavigationBarTheme.unselectedItemColor,
     );
   }
 }

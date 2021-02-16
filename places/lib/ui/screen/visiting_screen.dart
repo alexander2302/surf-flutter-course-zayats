@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:places/assets/constant_strings.dart' as ConstantsStrings;
-import 'package:places/assets/constants_text_style.dart' as ConstantsTextStyle;
-import 'package:places/assets/constants_color.dart' as ConstantsColor;
+import 'package:places/assets/strings.dart' as strings;
+import 'package:places/assets/styles.dart' as styles;
 import 'package:places/ui/screen/visiting/visiting_list_visited.dart';
 import 'package:places/ui/screen/visiting/visiting_list_want.dart';
 
@@ -18,49 +17,49 @@ class VisitingScreen extends StatefulWidget {
 class _VisitingScreenState extends State<VisitingScreen> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: DefaultTabController(
+    return Scaffold(
+      body: DefaultTabController(
         length: 2,
         child: Scaffold(
           appBar: AppBar(
             elevation: 0,
-            backgroundColor: Colors.white,
+            backgroundColor: Theme.of(context).scaffoldBackgroundColor,
             bottom: PreferredSize(
               preferredSize: Size(
                 360.0,
-                40.0,
+                46.0,
               ),
-              child: Container(
-                decoration: BoxDecoration(
-                  color: ConstantsColor.gray,
-                  shape: BoxShape.rectangle,
-                  borderRadius: BorderRadius.all(Radius.circular(40)),
+              child: Padding(
+                padding: const EdgeInsets.only(
+                  bottom: 6,
                 ),
-                width: 328,
-                height: 40,
-                child: TabBar(
-                  indicator: BoxDecoration(
-                    color: Colors.orange,
-                    borderRadius: BorderRadius.circular(40),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).unselectedWidgetColor,
+                    borderRadius: BorderRadius.all(Radius.circular(40)),
                   ),
-                  unselectedLabelColor: ConstantsColor.blackInactive,
-                  labelColor: Colors.white,
-                  tabs: [
-                    Tab(
-                      text: ConstantsStrings.tabWantToVisit,
-                    ),
-                    Tab(
-                      text: ConstantsStrings.tabPlaceVisited,
-                    ),
-                  ],
+                  width: 338,
+                  height: 40,
+                  child: TabBar(
+                    tabs: [
+                      Tab(
+                        text: strings.tabWantToVisit,
+                      ),
+                      Tab(
+                        text: strings.tabPlaceVisited,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
             title: Center(
               child: Text(
-                ConstantsStrings.tabBarTitle,
+                strings.tabBarTitle,
                 textAlign: TextAlign.center,
-                style: ConstantsTextStyle.whiteMainS18W500,
+                style: styles.normalS18W500.copyWith(
+                  color: Theme.of(context).accentColor,
+                ),
               ),
             ),
           ),

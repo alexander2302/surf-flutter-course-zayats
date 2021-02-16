@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:places/assets/colors.dart' as colors;
+import 'package:places/assets/styles.dart' as styles;
 
 var lightTheme = ThemeData(
   accentColor: colors.whiteSecondary,
@@ -23,41 +24,11 @@ var lightTheme = ThemeData(
   errorColor: colors.whiteRed,
   hintColor: colors.whiteGreen,
   textTheme: TextTheme(
-    headline1: TextStyle(
-      fontSize: 24,
-      color: colors.whiteSecondary,
-      fontWeight: FontWeight.w700,
-      fontStyle: FontStyle.normal,
-    ),
-    headline2: TextStyle(
-      fontSize: 14,
-      color: colors.whiteSecondary,
-      fontWeight: FontWeight.w400,
-      fontStyle: FontStyle.normal,
-    ),
-    headline3: TextStyle(
-      fontSize: 14,
-      color: colors.whiteSecondary,
-      fontWeight: FontWeight.w700,
-      fontStyle: FontStyle.normal,
-    ),
-    headline4: TextStyle(
-      fontSize: 14,
-      color: colors.whiteGreen,
-      fontWeight: FontWeight.w400,
-      fontStyle: FontStyle.normal,
-    ),
-    headline5: TextStyle(
-      fontSize: 16,
-      color: colors.whiteSecondary,
-      fontWeight: FontWeight.w500,
-      fontStyle: FontStyle.normal,
-    ),
-    // headline6: TextStyle(),
-    // bodyText1: TextStyle(),
-    // bodyText2: TextStyle(),
-    // subtitle1: TextStyle(),
-    // subtitle2: TextStyle(),
+    headline1: styles.whiteHeadline1,
+    headline2: styles.whiteHeadline2,
+    headline3: styles.whiteHeadline3,
+    headline4: styles.whiteHeadline4,
+    headline5: styles.whiteHeadline5,
   ),
 );
 
@@ -83,40 +54,10 @@ var darkTheme = ThemeData(
   errorColor: colors.blackRed,
   hintColor: colors.blackGreen,
   textTheme: TextTheme(
-    headline1: TextStyle(
-      fontSize: 24,
-      color: colors.blackWhite,
-      fontWeight: FontWeight.w700,
-      fontStyle: FontStyle.normal,
-    ),
-    headline2: TextStyle(
-      fontSize: 14,
-      color: colors.blackWhite,
-      fontWeight: FontWeight.w400,
-      fontStyle: FontStyle.normal,
-    ),
-    headline3: TextStyle(
-      fontSize: 14,
-      color: colors.blackSecondary2,
-      fontWeight: FontWeight.w700,
-      fontStyle: FontStyle.normal,
-    ),
-    headline4: TextStyle(
-      fontSize: 14,
-      color: colors.blackGreen,
-      fontWeight: FontWeight.w400,
-      fontStyle: FontStyle.normal,
-    ),
-    headline5: TextStyle(
-      fontSize: 16,
-      color: colors.blackWhite,
-      fontWeight: FontWeight.w500,
-      fontStyle: FontStyle.normal,
-    ),
-    // headline6: TextStyle(),
-    // bodyText1: TextStyle(),
-    // bodyText2: TextStyle(),
-    // subtitle1: TextStyle(),
-    // subtitle2: TextStyle(),
+    headline1: styles.blackHeadline1,
+    headline2: styles.blackHeadline2,
+    headline3: styles.blackHeadline3,
+    headline4: styles.blackHeadline4,
+    headline5: styles.blackHeadline5,
   ),
 );

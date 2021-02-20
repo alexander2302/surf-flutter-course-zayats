@@ -93,7 +93,9 @@ class SightDetails extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12.0),
           ),
-          onPressed: () => {},
+          onPressed: () => {
+            print('onPressed btn Route'),
+          },
           color: Theme.of(context).hintColor,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -124,7 +126,9 @@ class SightDetails extends StatelessWidget {
       children: [
         FlatButton(
           height: 40,
-          onPressed: () => {},
+          onPressed: () => {
+            print(' onPressed btn Calendar'),
+          },
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -146,7 +150,9 @@ class SightDetails extends StatelessWidget {
         ),
         FlatButton(
           height: 40,
-          onPressed: () => {},
+          onPressed: () => {
+            print(' onPressed btn Favorite'),
+          },
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[

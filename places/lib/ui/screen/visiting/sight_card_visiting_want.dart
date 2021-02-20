@@ -15,17 +15,22 @@ class SightCardVisitingWant extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Theme.of(context).unselectedWidgetColor,
-        borderRadius: forms.radAll16,
-      ),
-      margin: forms.top16,
-      child: Column(
-        children: [
-          _buildCardHeared(sight),
-          _buildCardDescription(sight, context),
-        ],
+    return InkWell(
+      onTap: () {
+        print('onTap card -> ' + sight.name);
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          color: Theme.of(context).unselectedWidgetColor,
+          borderRadius: forms.radAll16,
+        ),
+        margin: forms.top16,
+        child: Column(
+          children: [
+            _buildCardHeared(sight),
+            _buildCardDescription(sight, context),
+          ],
+        ),
       ),
     );
   }
@@ -66,40 +71,51 @@ Widget _buildCardHeared(Sight sight) {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text(
-                  sight.getTypeName(),
-                  maxLines: 1,
-                  style: styles.normalS14W700white,
+                ConstrainedBox(
+                  constraints: BoxConstraints(
+                    maxWidth: 210,
+                    minWidth: 210,
+                  ),
+                  child: Container(
+                    child: Text(
+                      sight.getTypeName(),
+                      maxLines: 2,
+                      style: styles.normalS14W700white,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ),
                 ),
-                Stack(children: <Widget>[
-                  IconButton(
-                    padding: const EdgeInsets.only(
-                      bottom: 20,
-                      right: 28,
-                    ),
-                    icon: Image.asset(
-                      images.calendarWhite,
-                      color: Colors.white,
-                      width: 24,
-                      height: 24,
-                    ),
-                    onPressed: () {},
+                IconButton(
+                  padding: const EdgeInsets.only(
+                    left: 10,
+                    bottom: 20,
                   ),
-                  IconButton(
-                    padding: const EdgeInsets.only(
-                      bottom: 20,
-                      left: 42,
-                      right: 20,
-                    ),
-                    icon: Image.asset(
-                      images.union,
-                      color: Colors.white,
-                      width: 24,
-                      height: 24,
-                    ),
-                    onPressed: () {},
+                  icon: Image.asset(
+                    images.calendarWhite,
+                    color: Colors.white,
+                    width: 24,
+                    height: 24,
                   ),
-                ]),
+                  onPressed: () {
+                    print('click calendar btn for -> ' + sight.name);
+                  },
+                ),
+                IconButton(
+                  padding: const EdgeInsets.only(
+                    bottom: 20,
+                    left: 1,
+                    right: 15,
+                  ),
+                  icon: Image.asset(
+                    images.union,
+                    color: Colors.white,
+                    width: 24,
+                    height: 24,
+                  ),
+                  onPressed: () {
+                    print('click delete btn for -> ' + sight.name);
+                  },
+                ),
               ],
             ),
           ),

@@ -15,17 +15,22 @@ class SightCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Theme.of(context).unselectedWidgetColor,
-        borderRadius: forms.radAll16,
-      ),
-      margin: forms.top16,
-      child: Column(
-        children: [
-          _buildCardHeared(sight),
-          _buildCardDescription(sight, context),
-        ],
+    return InkWell(
+      onTap: () {
+        print('onTap card -> ' + sight.name);
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          color: Theme.of(context).unselectedWidgetColor,
+          borderRadius: forms.radAll16,
+        ),
+        margin: forms.top16,
+        child: Column(
+          children: [
+            _buildCardHeared(sight),
+            _buildCardDescription(sight, context),
+          ],
+        ),
       ),
     );
   }
@@ -78,7 +83,9 @@ Widget _buildCardHeared(Sight sight) {
                     width: 20,
                     height: 18,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    print('click heart btn for -> ' + sight.name);
+                  },
                 ),
               ],
             ),
